@@ -14,9 +14,11 @@
     AACUsersViewController *usersViewController = [[AACUsersViewController alloc] initWithCollectionViewLayout:collectionViewFlowLayout];
     usersViewController.title = NSLocalizedString(@"Users", nil);
 
+    // Create `_window` with `usersViewController`.
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     _window.rootViewController = [[UINavigationController alloc] initWithRootViewController:usersViewController];
     [_window makeKeyAndVisible];
+
     return YES;
 }
 

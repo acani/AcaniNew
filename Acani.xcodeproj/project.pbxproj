@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D226891D172835A100984626 /* AACUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D226891C172835A100984626 /* AACUserCell.m */; };
+		D22689211728379C00984626 /* AACUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D22689201728379C00984626 /* AACUser.m */; };
+		D226893117287E6800984626 /* 0Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D226892D17287E6800984626 /* 0Large.jpg */; };
+		D226893217287E6800984626 /* 0Large@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D226892E17287E6800984626 /* 0Large@2x.jpg */; };
+		D226893317287E6800984626 /* 0Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D226892F17287E6800984626 /* 0Small.jpg */; };
+		D226893417287E6800984626 /* 0Small@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D226893017287E6800984626 /* 0Small@2x.jpg */; };
+		D226893717288AA100984626 /* AACUsersViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D226893617288AA100984626 /* AACUsersViewControllerSpecs.m */; };
+		D25F916D17296299003051EF /* AACUserSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D25F916C17296299003051EF /* AACUserSpecs.m */; };
+		D25F91721729678A003051EF /* 1Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25F916E1729678A003051EF /* 1Large.jpg */; };
+		D25F91731729678A003051EF /* 1Large@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25F916F1729678A003051EF /* 1Large@2x.jpg */; };
+		D25F91741729678A003051EF /* 1Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25F91701729678A003051EF /* 1Small.jpg */; };
+		D25F91751729678A003051EF /* 1Small@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25F91711729678A003051EF /* 1Small@2x.jpg */; };
+		D25F917717297068003051EF /* AACUserCellSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D25F917617297068003051EF /* AACUserCellSpecs.m */; };
 		D27E3FD717119B9700E29BAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27E3FD617119B9700E29BAF /* CoreGraphics.framework */; };
 		D27E3FD917119B9700E29BAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27E3FD817119B9700E29BAF /* Foundation.framework */; };
 		D27E3FDB17119B9700E29BAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27E3FDA17119B9700E29BAF /* UIKit.framework */; };
@@ -22,7 +35,6 @@
 		D27E3FFC17119B9800E29BAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27E3FDA17119B9700E29BAF /* UIKit.framework */; };
 		D27E400317119B9800E29BAF /* NSInvocation+SetTestMethodPrefixToSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D27E400217119B9800E29BAF /* NSInvocation+SetTestMethodPrefixToSpec.m */; };
 		D27E400517119B9800E29BAF /* AACAppDelegateSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D27E400417119B9800E29BAF /* AACAppDelegateSpecs.m */; };
-		D27E401017119C9200E29BAF /* AcaniFeatures.js in Sources */ = {isa = PBXBuildFile; fileRef = D27E400F17119C9200E29BAF /* AcaniFeatures.js */; };
 		D27E40151711A3F400E29BAF /* AACUsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27E40141711A3F400E29BAF /* AACUsersViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +49,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D226891B172835A100984626 /* AACUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACUserCell.h; sourceTree = "<group>"; };
+		D226891C172835A100984626 /* AACUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUserCell.m; sourceTree = "<group>"; };
+		D226891F1728379C00984626 /* AACUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACUser.h; sourceTree = "<group>"; };
+		D22689201728379C00984626 /* AACUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUser.m; sourceTree = "<group>"; };
+		D226892D17287E6800984626 /* 0Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0Large.jpg; sourceTree = "<group>"; };
+		D226892E17287E6800984626 /* 0Large@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "0Large@2x.jpg"; sourceTree = "<group>"; };
+		D226892F17287E6800984626 /* 0Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0Small.jpg; sourceTree = "<group>"; };
+		D226893017287E6800984626 /* 0Small@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "0Small@2x.jpg"; sourceTree = "<group>"; };
+		D226893617288AA100984626 /* AACUsersViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUsersViewControllerSpecs.m; sourceTree = "<group>"; };
+		D25F916C17296299003051EF /* AACUserSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUserSpecs.m; sourceTree = "<group>"; };
+		D25F916E1729678A003051EF /* 1Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1Large.jpg; sourceTree = "<group>"; };
+		D25F916F1729678A003051EF /* 1Large@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1Large@2x.jpg"; sourceTree = "<group>"; };
+		D25F91701729678A003051EF /* 1Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1Small.jpg; sourceTree = "<group>"; };
+		D25F91711729678A003051EF /* 1Small@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1Small@2x.jpg"; sourceTree = "<group>"; };
+		D25F917617297068003051EF /* AACUserCellSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUserCellSpecs.m; sourceTree = "<group>"; };
 		D27E3FD317119B9700E29BAF /* Acani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Acani.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27E3FD617119B9700E29BAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D27E3FD817119B9700E29BAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,8 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D27E3FFA17119B9800E29BAF /* SenTestingKit.framework in Frameworks */,
 				D27E3FFB17119B9800E29BAF /* Foundation.framework in Frameworks */,
+				D27E3FFA17119B9800E29BAF /* SenTestingKit.framework in Frameworks */,
 				D27E3FFC17119B9800E29BAF /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +113,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D22689171728351100984626 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D226891B172835A100984626 /* AACUserCell.h */,
+				D226891C172835A100984626 /* AACUserCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D226891E1728376600984626 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D226891F1728379C00984626 /* AACUser.h */,
+				D22689201728379C00984626 /* AACUser.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D2268935172880B500984626 /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				D226892D17287E6800984626 /* 0Large.jpg */,
+				D226892E17287E6800984626 /* 0Large@2x.jpg */,
+				D226892F17287E6800984626 /* 0Small.jpg */,
+				D226893017287E6800984626 /* 0Small@2x.jpg */,
+				D25F916E1729678A003051EF /* 1Large.jpg */,
+				D25F916F1729678A003051EF /* 1Large@2x.jpg */,
+				D25F91701729678A003051EF /* 1Small.jpg */,
+				D25F91711729678A003051EF /* 1Small@2x.jpg */,
+			);
+			name = Pictures;
+			sourceTree = "<group>";
+		};
+		D25F917817297562003051EF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D226893617288AA100984626 /* AACUsersViewControllerSpecs.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D25F917917297567003051EF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D25F916C17296299003051EF /* AACUserSpecs.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D25F917A1729756A003051EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D25F917617297068003051EF /* AACUserCellSpecs.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		D27E3FCA17119B9700E29BAF = {
 			isa = PBXGroup;
 			children = (
@@ -112,8 +196,8 @@
 			children = (
 				D27E3FD617119B9700E29BAF /* CoreGraphics.framework */,
 				D27E3FD817119B9700E29BAF /* Foundation.framework */,
-				D27E3FDA17119B9700E29BAF /* UIKit.framework */,
 				D27E3FF917119B9800E29BAF /* SenTestingKit.framework */,
+				D27E3FDA17119B9700E29BAF /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -124,6 +208,8 @@
 				D27E3FE317119B9700E29BAF /* AACAppDelegate.h */,
 				D27E3FE417119B9700E29BAF /* AACAppDelegate.m */,
 				D27E40161711A71A00E29BAF /* Controllers */,
+				D226891E1728376600984626 /* Models */,
+				D22689171728351100984626 /* Views */,
 				D27E3FE617119B9700E29BAF /* Resources */,
 				D27E3FDE17119B9700E29BAF /* Supporting Files */,
 			);
@@ -143,8 +229,9 @@
 		D27E3FE617119B9700E29BAF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D27E3FE717119B9700E29BAF /* Icon */,
 				D27E3FEC17119B9700E29BAF /* Default */,
+				D27E3FE717119B9700E29BAF /* Icon */,
+				D2268935172880B500984626 /* Pictures */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -172,6 +259,9 @@
 			isa = PBXGroup;
 			children = (
 				D27E400417119B9800E29BAF /* AACAppDelegateSpecs.m */,
+				D25F917817297562003051EF /* Controllers */,
+				D25F917917297567003051EF /* Models */,
+				D25F917A1729756A003051EF /* Views */,
 				D27E400017119B9800E29BAF /* Supporting Files */,
 			);
 			path = AcaniSpecs;
@@ -280,6 +370,14 @@
 				D27E3FEE17119B9700E29BAF /* Default.png in Resources */,
 				D27E3FF017119B9700E29BAF /* Default@2x.png in Resources */,
 				D27E3FF217119B9700E29BAF /* Default-568h@2x.png in Resources */,
+				D226893117287E6800984626 /* 0Large.jpg in Resources */,
+				D226893217287E6800984626 /* 0Large@2x.jpg in Resources */,
+				D226893317287E6800984626 /* 0Small.jpg in Resources */,
+				D226893417287E6800984626 /* 0Small@2x.jpg in Resources */,
+				D25F91721729678A003051EF /* 1Large.jpg in Resources */,
+				D25F91731729678A003051EF /* 1Large@2x.jpg in Resources */,
+				D25F91741729678A003051EF /* 1Small.jpg in Resources */,
+				D25F91751729678A003051EF /* 1Small@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,8 +413,9 @@
 			files = (
 				D27E3FE217119B9700E29BAF /* main.m in Sources */,
 				D27E3FE517119B9700E29BAF /* AACAppDelegate.m in Sources */,
-				D27E401017119C9200E29BAF /* AcaniFeatures.js in Sources */,
 				D27E40151711A3F400E29BAF /* AACUsersViewController.m in Sources */,
+				D226891D172835A100984626 /* AACUserCell.m in Sources */,
+				D22689211728379C00984626 /* AACUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +425,9 @@
 			files = (
 				D27E400317119B9800E29BAF /* NSInvocation+SetTestMethodPrefixToSpec.m in Sources */,
 				D27E400517119B9800E29BAF /* AACAppDelegateSpecs.m in Sources */,
+				D226893717288AA100984626 /* AACUsersViewControllerSpecs.m in Sources */,
+				D25F916D17296299003051EF /* AACUserSpecs.m in Sources */,
+				D25F917717297068003051EF /* AACUserCellSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
