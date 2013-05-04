@@ -7,6 +7,8 @@
     AACUserCell *_userCell;
 }
 
+#pragma mark - SenTest
+
 - (void)setUp
 {
     _userCell = [[AACUserCell alloc] initWithFrame:CGRectMake(4, 4, 75, 75)];
@@ -17,17 +19,20 @@
     _userCell = nil;
 }
 
+#pragma mark - UIView
+
 - (void)specInitWithFrame
 {
+    // Spec `nameLabel`.
     UILabel *nameLabel = _userCell.nameLabel;
-    STAssertNotNil(nameLabel,                                                                         @"Create and set nameLabel.");
-    STAssertEquals(nameLabel.frame, CGRectMake(3, 0, 75-3, 16),                                       @"Set frame.");
-    STAssertEqualObjects(nameLabel.backgroundColor, [UIColor clearColor],                             @"Set backgroundColor.");
-    STAssertEqualObjects(nameLabel.font, [UIFont boldSystemFontOfSize:12],                            @"Set font.");
-    STAssertEqualObjects(nameLabel.shadowColor, [UIColor blackColor],                                 @"Set shadowColor.");
-    STAssertEquals(nameLabel.shadowOffset, CGSizeMake(0, 1),                                          @"Set shadowOffset.");
-    STAssertEqualObjects(nameLabel.textColor, [UIColor whiteColor],                                   @"Set textColor.");
-    STAssertEquals(nameLabel.superview, _userCell.contentView,                                        @"Set superview.");
+    STAssertNotNil(nameLabel, nil);
+    STAssertEquals(nameLabel.frame, CGRectMake(3, 0, 75-3, 16), nil);
+    STAssertEqualObjects(nameLabel.backgroundColor, [UIColor clearColor], nil);
+    STAssertEqualObjects(nameLabel.font, [UIFont boldSystemFontOfSize:12], nil);
+    STAssertEqualObjects(nameLabel.shadowColor, [UIColor blackColor], nil);
+    STAssertEquals(nameLabel.shadowOffset, CGSizeMake(0, 1), nil);
+    STAssertEqualObjects(nameLabel.textColor, [UIColor whiteColor], nil);
+    STAssertEquals(nameLabel.superview, _userCell.contentView, nil);
 }
 
 @end

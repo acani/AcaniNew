@@ -8,36 +8,26 @@
 
 - (void)specLaunch
 {
+    // Spec `appDelegate`.
     AACAppDelegate *appDelegate = (AACAppDelegate *)[UIApplication sharedApplication].delegate;
-    STAssertNotNil(appDelegate,                                                                       @"Create and set appDelegate.");
-    STAssertTrue([appDelegate isMemberOfClass:[AACAppDelegate class]],                                @"Make AACAppDelegate.");
+    STAssertNotNil(appDelegate, nil);
+    STAssertTrue([appDelegate isMemberOfClass:[AACAppDelegate class]], nil);
 
+    // Spec `_window`.
     UIWindow *window = appDelegate.window;
-    STAssertNotNil(window,                                                                            @"Create window.");
-    STAssertEquals(window.frame, [[UIScreen mainScreen] bounds],                                      @"Set frame to main-screen bounds.");
-    STAssertEquals(window, [UIApplication sharedApplication].keyWindow,                               @"Make key.");
-    STAssertFalse (window.hidden,                                                                     @"Make visible.");
+    STAssertNotNil(window, nil);
+    STAssertEquals(window.frame, [[UIScreen mainScreen] bounds], nil);
+    STAssertEquals(window, [UIApplication sharedApplication].keyWindow, nil);
+    STAssertFalse(window.hidden, nil);
 
-    UIViewController *rootViewController = window.rootViewController;
-    STAssertNotNil(rootViewController,                                                                @"Create and set rootViewController.");
-    STAssertTrue([rootViewController isMemberOfClass:[UINavigationController class]],                 @"Make UINavigationController.");
+    // Spec `navigationController`.
+    UINavigationController *navigationController = (UINavigationController *)window.rootViewController;
+    STAssertNotNil(navigationController, nil);
+    STAssertTrue([navigationController isMemberOfClass:[UINavigationController class]], nil);
 
-    UIViewController *topViewController = ((UINavigationController *)rootViewController).topViewController;
-    STAssertNotNil(topViewController,                                                                 @"Create and set topViewController.");
-    STAssertTrue([topViewController isMemberOfClass:[AACUsersViewController class]],                  @"Make AACUsersViewController.");
-    STAssertEqualObjects(topViewController.title, NSLocalizedString(@"Users", nil),                   @"Set title to 'Users'.");
-
-    UICollectionView *collectionView = ((UICollectionViewController *)topViewController).collectionView;
-    STAssertNotNil(collectionView,                                                                    @"UIKit should load collectionView.");
-    STAssertEqualObjects(collectionView.backgroundColor, [UIColor whiteColor],                        @"Set backgroundColor to white.");
-
-    UICollectionViewFlowLayout *collectionViewFlowLayout = (UICollectionViewFlowLayout *)collectionView.collectionViewLayout;
-    STAssertNotNil(collectionViewFlowLayout,                                                          @"Create and set collectionViewLayout.");
-    STAssertTrue([collectionViewFlowLayout isMemberOfClass:[UICollectionViewFlowLayout class]],       @"Make AACUsersViewController.");
-    STAssertEquals(collectionViewFlowLayout.itemSize,           CGSizeMake(75, 75),                   @"Set itemSize to 75 x 75.");
-    STAssertEquals(collectionViewFlowLayout.minimumInteritemSpacing,       4.0f,                      @"Set minimumInteritemSpacing to 4.");
-    STAssertEquals(collectionViewFlowLayout.minimumLineSpacing,            4.0f,                      @"Set minimumLineSpacing to 4.");
-    STAssertEquals(collectionViewFlowLayout.sectionInset, UIEdgeInsetsMake(4, 4, 4, 4),               @"Set sectionInset to (4, 4, 4, 4).");
+    // Spec `UINavigationBar`.
+    UIColor *tintColor = [UIColor colorWithRed:217/255.0 green:153/255.0 blue:166/255.0 alpha:1];
+    STAssertEqualObjects(navigationController.navigationBar.tintColor, tintColor, nil);
 }
 
 @end

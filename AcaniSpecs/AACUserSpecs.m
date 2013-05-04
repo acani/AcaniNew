@@ -7,6 +7,8 @@
     AACUser *_user;
 }
 
+#pragma mark - SenTest
+
 - (void)setUp
 {
     _user = [[AACUser alloc] init];
@@ -17,30 +19,32 @@
     _user = nil;
 }
 
+#pragma mark - AACUser
+
 - (void)specProperties
 {
-    STAssertNil(_user.bio,                                                                            @"Start bio nil.");
-    STAssertNil(_user.name,                                                                           @"Start name nil.");
-    STAssertNil(_user.uniqueIdentifier,                                                               @"Start uniqueIdentifier nil.");
+    STAssertNil(_user.bio, nil);
+    STAssertNil(_user.name, nil);
+    STAssertNil(_user.uniqueIdentifier, nil);
 
     _user.bio = @"Hello! My name is Lauren.";
     _user.name = @"Lauren";
     _user.uniqueIdentifier = @"0";
 
-    STAssertEqualObjects(_user.bio, @"Hello! My name is Lauren.",                                     @"Add bio property.");
-    STAssertEqualObjects(_user.name, @"Lauren",                                                       @"Add name property.");
-    STAssertEqualObjects(_user.uniqueIdentifier, @"0",                                                @"Add uniqueIdentifier property.");
+    STAssertEqualObjects(_user.bio, @"Hello! My name is Lauren.", nil);
+    STAssertEqualObjects(_user.name, @"Lauren", nil);
+    STAssertEqualObjects(_user.uniqueIdentifier, @"0", nil);
 }
 
 - (void)specPictureNameOfType
 {
     _user.uniqueIdentifier = @"0";
-    STAssertEqualObjects([_user pictureNameOfType:AACUserPictureTypeLarge], @"0Large.jpg",            @"Return large name.");
-    STAssertEqualObjects([_user pictureNameOfType:AACUserPictureTypeSmall], @"0Small.jpg",            @"Return small name.");
+    STAssertEqualObjects([_user pictureNameOfType:AACUserPictureTypeLarge], @"0Large.jpg", nil);
+    STAssertEqualObjects([_user pictureNameOfType:AACUserPictureTypeSmall], @"0Small.jpg", nil);
 
     _user.uniqueIdentifier = @"1";
-    STAssertEqualObjects([_user pictureNameOfType:AACUserPictureTypeLarge], @"1Large.jpg",            @"Return large name.");
-    STAssertEqualObjects([_user pictureNameOfType:AACUserPictureTypeSmall], @"1Small.jpg",            @"Return small name.");
+    STAssertEqualObjects([_user pictureNameOfType:AACUserPictureTypeLarge], @"1Large.jpg", nil);
+    STAssertEqualObjects([_user pictureNameOfType:AACUserPictureTypeSmall], @"1Small.jpg", nil);
 }
 
 @end
