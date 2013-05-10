@@ -25,16 +25,16 @@ static NSString *CellIdentifier = @"ACUserCell";
     if (self) {
         self.title = NSLocalizedString(@"Users", nil); // for back button of pushed page
 
-        // Create `titleLabel`.
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
-        titleLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
-        titleLabel.backgroundColor = [UIColor clearColor];
-        titleLabel.font = [UIFont fontWithName:@"AvenirNext-Heavy" size:TITLE_FONT_SIZE_PORTRAIT];
-        titleLabel.shadowColor = [UIColor colorWithWhite:0 alpha:0.5];
-        titleLabel.text = [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"] lowercaseString]; // acani
-        titleLabel.textAlignment = NSTextAlignmentCenter;
-        titleLabel.textColor = [UIColor whiteColor];
-        self.navigationItem.titleView = titleLabel;
+        // Create `logoLabel`.
+        UILabel *logoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
+        logoLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+        logoLabel.backgroundColor = [UIColor clearColor];
+        logoLabel.font = [UIFont fontWithName:@"AvenirNext-Heavy" size:TITLE_FONT_SIZE_PORTRAIT];
+        logoLabel.shadowColor = [UIColor colorWithWhite:0 alpha:0.5];
+        logoLabel.text = [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"] lowercaseString]; // acani
+        logoLabel.textAlignment = NSTextAlignmentCenter;
+        logoLabel.textColor = [UIColor whiteColor];
+        self.navigationItem.titleView = logoLabel;
     }
     return self;
 }
@@ -83,8 +83,8 @@ static NSString *CellIdentifier = @"ACUserCell";
         insets = UIEdgeInsetsMake(32, 0, 0, 0);
         fontSize = TITLE_FONT_SIZE_LANDSCAPE;
     }
-    UILabel *titleLabel = (UILabel *)self.navigationItem.titleView;
-    titleLabel.font = [UIFont fontWithName:@"AvenirNext-Heavy" size:fontSize];
+    UILabel *logoLabel = (UILabel *)self.navigationItem.titleView;
+    logoLabel.font = [UIFont fontWithName:@"AvenirNext-Heavy" size:fontSize];
     self.collectionView.contentInset = insets;
     self.collectionView.scrollIndicatorInsets = insets;
 }

@@ -20,6 +20,8 @@
 		D25F91741729678A003051EF /* 1Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25F91701729678A003051EF /* 1Small.jpg */; };
 		D25F91751729678A003051EF /* 1Small@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25F91711729678A003051EF /* 1Small@2x.jpg */; };
 		D25F917717297068003051EF /* AACUserCellSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D25F917617297068003051EF /* AACUserCellSpecs.m */; };
+		D264A2D9173C73D0005D6298 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D264A2D8173C73D0005D6298 /* FacebookSDK.framework */; };
+		D264A2DF173C76A6005D6298 /* AACWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D264A2DE173C76A6005D6298 /* AACWelcomeViewController.m */; };
 		D27E3FD717119B9700E29BAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27E3FD617119B9700E29BAF /* CoreGraphics.framework */; };
 		D27E3FD917119B9700E29BAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27E3FD817119B9700E29BAF /* Foundation.framework */; };
 		D27E3FDB17119B9700E29BAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27E3FDA17119B9700E29BAF /* UIKit.framework */; };
@@ -64,6 +66,9 @@
 		D25F91701729678A003051EF /* 1Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1Small.jpg; sourceTree = "<group>"; };
 		D25F91711729678A003051EF /* 1Small@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1Small@2x.jpg"; sourceTree = "<group>"; };
 		D25F917617297068003051EF /* AACUserCellSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUserCellSpecs.m; sourceTree = "<group>"; };
+		D264A2D8173C73D0005D6298 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = Acani/FacebookSDK/build/FacebookSDK.framework; sourceTree = "<group>"; };
+		D264A2DD173C76A1005D6298 /* AACWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACWelcomeViewController.h; sourceTree = "<group>"; };
+		D264A2DE173C76A6005D6298 /* AACWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACWelcomeViewController.m; sourceTree = "<group>"; };
 		D27E3FD317119B9700E29BAF /* Acani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Acani.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27E3FD617119B9700E29BAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D27E3FD817119B9700E29BAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,6 +92,7 @@
 		D27E400F17119C9200E29BAF /* AcaniFeatures.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = AcaniFeatures.js; sourceTree = "<group>"; };
 		D27E40131711A3F400E29BAF /* AACUsersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACUsersViewController.h; sourceTree = "<group>"; };
 		D27E40141711A3F400E29BAF /* AACUsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUsersViewController.m; sourceTree = "<group>"; };
+		D29CA2AF1735DAD600B5052B /* AACDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AACDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D27E3FD717119B9700E29BAF /* CoreGraphics.framework in Frameworks */,
+				D264A2D9173C73D0005D6298 /* FacebookSDK.framework in Frameworks */,
 				D27E3FD917119B9700E29BAF /* Foundation.framework in Frameworks */,
 				D27E3FDB17119B9700E29BAF /* UIKit.framework in Frameworks */,
 			);
@@ -195,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				D27E3FD617119B9700E29BAF /* CoreGraphics.framework */,
+				D264A2D8173C73D0005D6298 /* FacebookSDK.framework */,
 				D27E3FD817119B9700E29BAF /* Foundation.framework */,
 				D27E3FF917119B9800E29BAF /* SenTestingKit.framework */,
 				D27E3FDA17119B9700E29BAF /* UIKit.framework */,
@@ -205,6 +213,7 @@
 		D27E3FDC17119B9700E29BAF /* Acani */ = {
 			isa = PBXGroup;
 			children = (
+				D29CA2AF1735DAD600B5052B /* AACDefines.h */,
 				D27E3FE317119B9700E29BAF /* AACAppDelegate.h */,
 				D27E3FE417119B9700E29BAF /* AACAppDelegate.m */,
 				D27E40161711A71A00E29BAF /* Controllers */,
@@ -287,6 +296,8 @@
 		D27E40161711A71A00E29BAF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D264A2DD173C76A1005D6298 /* AACWelcomeViewController.h */,
+				D264A2DE173C76A6005D6298 /* AACWelcomeViewController.m */,
 				D27E40131711A3F400E29BAF /* AACUsersViewController.h */,
 				D27E40141711A3F400E29BAF /* AACUsersViewController.m */,
 			);
@@ -300,6 +311,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D27E400817119B9800E29BAF /* Build configuration list for PBXNativeTarget "Acani" */;
 			buildPhases = (
+				D264A2D7173C6FBA005D6298 /* ShellScript */,
 				D27E3FCF17119B9700E29BAF /* Sources */,
 				D27E3FD017119B9700E29BAF /* Frameworks */,
 				D27E3FD117119B9700E29BAF /* Resources */,
@@ -391,6 +403,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		D264A2D7173C6FBA005D6298 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ ! -e \"Acani/FacebookSDK\" ]\nthen\ngit submodule update --init\nfi\n\nif [ ! -e \"Acani/FacebookSDK/build/FacebookSDK.framework/Headers/FacebookSDK.h\" ]\nthen\nsh Acani/FacebookSDK/scripts/build_framework.sh\nfi";
+		};
 		D27E3FF617119B9800E29BAF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,6 +441,7 @@
 				D27E40151711A3F400E29BAF /* AACUsersViewController.m in Sources */,
 				D226891D172835A100984626 /* AACUserCell.m in Sources */,
 				D22689211728379C00984626 /* AACUser.m in Sources */,
+				D264A2DF173C76A6005D6298 /* AACWelcomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +524,10 @@
 		D27E400917119B9800E29BAF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Acani/FacebookSDK/build\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Acani/Prefix.pch;
 				INFOPLIST_FILE = Acani/Info.plist;
@@ -509,6 +539,10 @@
 		D27E400A17119B9800E29BAF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Acani/FacebookSDK/build\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Acani/Prefix.pch;
 				INFOPLIST_FILE = Acani/Info.plist;

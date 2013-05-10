@@ -1,0 +1,3 @@
+[submodule "Acani/FacebookSDK"]
+	path = Acani/FacebookSDK
+	url = https://github.com/facebook/facebook-ios-sdk.git

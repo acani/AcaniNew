@@ -27,19 +27,19 @@
     STAssertEquals(layout.minimumLineSpacing, 4.0f, nil);
     STAssertEquals(layout.sectionInset, UIEdgeInsetsMake(4, 4, 4, 4), nil);
 
-    // Spec `titleLabel`.
-    UILabel *_titleLabel = (UILabel *)_usersViewController.navigationItem.titleView;
-    STAssertNotNil(_titleLabel, nil);
-    STAssertTrue([_titleLabel isMemberOfClass:[UILabel class]], nil);
-    STAssertEquals(_titleLabel.frame.size, CGSizeMake(100, 44), nil);
+    // Spec `logoLabel`.
+    UILabel *_logoLabel = (UILabel *)_usersViewController.navigationItem.titleView;
+    STAssertNotNil(_logoLabel, nil);
+    STAssertTrue([_logoLabel isMemberOfClass:[UILabel class]], nil);
+    STAssertEquals(_logoLabel.frame.size, CGSizeMake(100, 44), nil);
     UIViewAutoresizing autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
-    STAssertEquals(_titleLabel.autoresizingMask, autoresizingMask, nil);
-    STAssertEqualObjects(_titleLabel.backgroundColor, [UIColor clearColor], nil);
-    STAssertEqualObjects(_titleLabel.font, [UIFont fontWithName:@"AvenirNext-Heavy" size:27], nil);
-    STAssertEqualObjects(_titleLabel.shadowColor, [UIColor colorWithWhite:0 alpha:0.5], nil);
-    STAssertEqualObjects(_titleLabel.text, @"acani", nil);
-    STAssertEquals(_titleLabel.textAlignment, NSTextAlignmentCenter, nil);
-    STAssertEqualObjects(_titleLabel.textColor, [UIColor whiteColor], nil);
+    STAssertEquals(_logoLabel.autoresizingMask, autoresizingMask, nil);
+    STAssertEqualObjects(_logoLabel.backgroundColor, [UIColor clearColor], nil);
+    STAssertEqualObjects(_logoLabel.font, [UIFont fontWithName:@"AvenirNext-Heavy" size:27], nil);
+    STAssertEqualObjects(_logoLabel.shadowColor, [UIColor colorWithWhite:0 alpha:0.5], nil);
+    STAssertEqualObjects(_logoLabel.text, @"acani", nil);
+    STAssertEquals(_logoLabel.textAlignment, NSTextAlignmentCenter, nil);
+    STAssertEqualObjects(_logoLabel.textColor, [UIColor whiteColor], nil);
 
     // Spec `viewDidLoad`.
     STAssertEquals(_navigationController.navigationBar.barStyle, UIBarStyleBlack, nil);
@@ -54,14 +54,14 @@
 
     // Spec rotate to landscape.
     [_usersViewController willRotateToInterfaceOrientation:UIInterfaceOrientationLandscapeLeft duration:0];
-    STAssertEqualObjects(_titleLabel.font, [UIFont fontWithName:@"AvenirNext-Heavy" size:20], nil);
+    STAssertEqualObjects(_logoLabel.font, [UIFont fontWithName:@"AvenirNext-Heavy" size:20], nil);
     insets.top = 32;
     STAssertEquals(_collectionView.contentInset, insets, nil);
     STAssertEquals(_collectionView.scrollIndicatorInsets, insets, nil);
 
     // Spec rotate back to portrait.
     [_usersViewController willRotateToInterfaceOrientation:UIInterfaceOrientationPortrait duration:0];
-    STAssertEqualObjects(_titleLabel.font, [UIFont fontWithName:@"AvenirNext-Heavy" size:27], nil);
+    STAssertEqualObjects(_logoLabel.font, [UIFont fontWithName:@"AvenirNext-Heavy" size:27], nil);
     insets.top = 44;
     STAssertEquals(_collectionView.contentInset, insets, nil);
     STAssertEquals(_collectionView.scrollIndicatorInsets, insets, nil);
