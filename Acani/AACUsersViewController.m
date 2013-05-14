@@ -1,3 +1,4 @@
+#import "AACProfileViewController.h"
 #import "AACUser.h"
 #import "AACUserCell.h"
 #import "AACUsersViewController.h"
@@ -103,6 +104,15 @@ static NSString *CellIdentifier = @"ACUserCell";
     cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:[user pictureNameOfType:AACUserPictureTypeSmall]]];
     cell.nameLabel.text = user.name;
     return cell;
+}
+
+#pragma mark - UICollectionViewDelegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    AACUser *user = _users[indexPath.item];
+    AACProfileViewController *profileViewController = [[AACProfileViewController alloc] initWithUser:user];
+    [self.navigationController pushViewController:profileViewController animated:YES];
 }
 
 @end

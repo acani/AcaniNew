@@ -22,6 +22,7 @@
 		D25F917717297068003051EF /* AACUserCellSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D25F917617297068003051EF /* AACUserCellSpecs.m */; };
 		D264A2D9173C73D0005D6298 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D264A2D8173C73D0005D6298 /* FacebookSDK.framework */; };
 		D264A2DF173C76A6005D6298 /* AACWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D264A2DE173C76A6005D6298 /* AACWelcomeViewController.m */; };
+		D264A2E21742553C005D6298 /* AACProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D264A2E11742553C005D6298 /* AACProfileViewController.m */; };
 		D27E3FD717119B9700E29BAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27E3FD617119B9700E29BAF /* CoreGraphics.framework */; };
 		D27E3FD917119B9700E29BAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27E3FD817119B9700E29BAF /* Foundation.framework */; };
 		D27E3FDB17119B9700E29BAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27E3FDA17119B9700E29BAF /* UIKit.framework */; };
@@ -69,6 +70,8 @@
 		D264A2D8173C73D0005D6298 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = Acani/FacebookSDK/build/FacebookSDK.framework; sourceTree = "<group>"; };
 		D264A2DD173C76A1005D6298 /* AACWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACWelcomeViewController.h; sourceTree = "<group>"; };
 		D264A2DE173C76A6005D6298 /* AACWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACWelcomeViewController.m; sourceTree = "<group>"; };
+		D264A2E01742553C005D6298 /* AACProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACProfileViewController.h; sourceTree = "<group>"; };
+		D264A2E11742553C005D6298 /* AACProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACProfileViewController.m; sourceTree = "<group>"; };
 		D27E3FD317119B9700E29BAF /* Acani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Acani.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27E3FD617119B9700E29BAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D27E3FD817119B9700E29BAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -296,10 +299,12 @@
 		D27E40161711A71A00E29BAF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D264A2DD173C76A1005D6298 /* AACWelcomeViewController.h */,
-				D264A2DE173C76A6005D6298 /* AACWelcomeViewController.m */,
+				D264A2E01742553C005D6298 /* AACProfileViewController.h */,
+				D264A2E11742553C005D6298 /* AACProfileViewController.m */,
 				D27E40131711A3F400E29BAF /* AACUsersViewController.h */,
 				D27E40141711A3F400E29BAF /* AACUsersViewController.m */,
+				D264A2DD173C76A1005D6298 /* AACWelcomeViewController.h */,
+				D264A2DE173C76A6005D6298 /* AACWelcomeViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -442,6 +447,7 @@
 				D226891D172835A100984626 /* AACUserCell.m in Sources */,
 				D22689211728379C00984626 /* AACUser.m in Sources */,
 				D264A2DF173C76A6005D6298 /* AACWelcomeViewController.m in Sources */,
+				D264A2E21742553C005D6298 /* AACProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
