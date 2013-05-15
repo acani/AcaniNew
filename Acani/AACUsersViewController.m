@@ -52,10 +52,6 @@ static NSString *CellIdentifier = @"ACUserCell";
     self.collectionView.alwaysBounceVertical = YES;
     self.collectionView.backgroundColor = [UIColor whiteColor];
 
-    UIEdgeInsets insets = UIEdgeInsetsMake(self.navigationController.navigationBar.frame.size.height, 0, 0, 0);
-    self.collectionView.contentInset = insets;
-    self.collectionView.scrollIndicatorInsets = insets;
-
     [self.collectionView registerClass:[AACUserCell class] forCellWithReuseIdentifier:CellIdentifier];
 
     AACUser *user0 = [[AACUser alloc] init];
@@ -69,6 +65,15 @@ static NSString *CellIdentifier = @"ACUserCell";
     user1.uniqueIdentifier = @"1";
 
     _users = @[user0, user1, user0, user1, user0, user1, user0, user1, user0, user1, user0, user1, user0, user1, user0, user1, user0, user1, user0, user1, user0, user1, user0, user1, user0, user1, user0, user1, user0, user1];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    UIEdgeInsets insets = UIEdgeInsetsMake(self.navigationController.navigationBar.frame.size.height, 0, 0, 0);
+    self.collectionView.contentInset = insets;
+    self.collectionView.scrollIndicatorInsets = insets;
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration

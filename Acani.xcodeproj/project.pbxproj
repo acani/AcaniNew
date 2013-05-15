@@ -9,20 +9,19 @@
 /* Begin PBXBuildFile section */
 		D226891D172835A100984626 /* AACUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D226891C172835A100984626 /* AACUserCell.m */; };
 		D22689211728379C00984626 /* AACUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D22689201728379C00984626 /* AACUser.m */; };
-		D226893117287E6800984626 /* 0Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D226892D17287E6800984626 /* 0Large.jpg */; };
-		D226893217287E6800984626 /* 0Large@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D226892E17287E6800984626 /* 0Large@2x.jpg */; };
+		D226893217287E6800984626 /* 0Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D226892E17287E6800984626 /* 0Large.jpg */; };
 		D226893317287E6800984626 /* 0Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D226892F17287E6800984626 /* 0Small.jpg */; };
 		D226893417287E6800984626 /* 0Small@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D226893017287E6800984626 /* 0Small@2x.jpg */; };
 		D226893717288AA100984626 /* AACUsersViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D226893617288AA100984626 /* AACUsersViewControllerSpecs.m */; };
 		D25F916D17296299003051EF /* AACUserSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D25F916C17296299003051EF /* AACUserSpecs.m */; };
-		D25F91721729678A003051EF /* 1Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25F916E1729678A003051EF /* 1Large.jpg */; };
-		D25F91731729678A003051EF /* 1Large@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25F916F1729678A003051EF /* 1Large@2x.jpg */; };
+		D25F91731729678A003051EF /* 1Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25F916F1729678A003051EF /* 1Large.jpg */; };
 		D25F91741729678A003051EF /* 1Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25F91701729678A003051EF /* 1Small.jpg */; };
 		D25F91751729678A003051EF /* 1Small@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25F91711729678A003051EF /* 1Small@2x.jpg */; };
 		D25F917717297068003051EF /* AACUserCellSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D25F917617297068003051EF /* AACUserCellSpecs.m */; };
 		D264A2D9173C73D0005D6298 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D264A2D8173C73D0005D6298 /* FacebookSDK.framework */; };
 		D264A2DF173C76A6005D6298 /* AACWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D264A2DE173C76A6005D6298 /* AACWelcomeViewController.m */; };
 		D264A2E21742553C005D6298 /* AACProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D264A2E11742553C005D6298 /* AACProfileViewController.m */; };
+		D264A2E51742B9D7005D6298 /* AACImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D264A2E41742B9D7005D6298 /* AACImageScrollView.m */; };
 		D27E3FD717119B9700E29BAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27E3FD617119B9700E29BAF /* CoreGraphics.framework */; };
 		D27E3FD917119B9700E29BAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27E3FD817119B9700E29BAF /* Foundation.framework */; };
 		D27E3FDB17119B9700E29BAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27E3FDA17119B9700E29BAF /* UIKit.framework */; };
@@ -56,14 +55,12 @@
 		D226891C172835A100984626 /* AACUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUserCell.m; sourceTree = "<group>"; };
 		D226891F1728379C00984626 /* AACUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACUser.h; sourceTree = "<group>"; };
 		D22689201728379C00984626 /* AACUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUser.m; sourceTree = "<group>"; };
-		D226892D17287E6800984626 /* 0Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0Large.jpg; sourceTree = "<group>"; };
-		D226892E17287E6800984626 /* 0Large@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "0Large@2x.jpg"; sourceTree = "<group>"; };
+		D226892E17287E6800984626 /* 0Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0Large.jpg; sourceTree = "<group>"; };
 		D226892F17287E6800984626 /* 0Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0Small.jpg; sourceTree = "<group>"; };
 		D226893017287E6800984626 /* 0Small@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "0Small@2x.jpg"; sourceTree = "<group>"; };
 		D226893617288AA100984626 /* AACUsersViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUsersViewControllerSpecs.m; sourceTree = "<group>"; };
 		D25F916C17296299003051EF /* AACUserSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUserSpecs.m; sourceTree = "<group>"; };
-		D25F916E1729678A003051EF /* 1Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1Large.jpg; sourceTree = "<group>"; };
-		D25F916F1729678A003051EF /* 1Large@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1Large@2x.jpg"; sourceTree = "<group>"; };
+		D25F916F1729678A003051EF /* 1Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1Large.jpg; sourceTree = "<group>"; };
 		D25F91701729678A003051EF /* 1Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1Small.jpg; sourceTree = "<group>"; };
 		D25F91711729678A003051EF /* 1Small@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1Small@2x.jpg"; sourceTree = "<group>"; };
 		D25F917617297068003051EF /* AACUserCellSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUserCellSpecs.m; sourceTree = "<group>"; };
@@ -72,6 +69,8 @@
 		D264A2DE173C76A6005D6298 /* AACWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACWelcomeViewController.m; sourceTree = "<group>"; };
 		D264A2E01742553C005D6298 /* AACProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACProfileViewController.h; sourceTree = "<group>"; };
 		D264A2E11742553C005D6298 /* AACProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACProfileViewController.m; sourceTree = "<group>"; };
+		D264A2E31742B9D7005D6298 /* AACImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACImageScrollView.h; sourceTree = "<group>"; };
+		D264A2E41742B9D7005D6298 /* AACImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACImageScrollView.m; sourceTree = "<group>"; };
 		D27E3FD317119B9700E29BAF /* Acani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Acani.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27E3FD617119B9700E29BAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D27E3FD817119B9700E29BAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -126,6 +125,8 @@
 		D22689171728351100984626 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D264A2E31742B9D7005D6298 /* AACImageScrollView.h */,
+				D264A2E41742B9D7005D6298 /* AACImageScrollView.m */,
 				D226891B172835A100984626 /* AACUserCell.h */,
 				D226891C172835A100984626 /* AACUserCell.m */,
 			);
@@ -144,12 +145,10 @@
 		D2268935172880B500984626 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
-				D226892D17287E6800984626 /* 0Large.jpg */,
-				D226892E17287E6800984626 /* 0Large@2x.jpg */,
+				D226892E17287E6800984626 /* 0Large.jpg */,
 				D226892F17287E6800984626 /* 0Small.jpg */,
 				D226893017287E6800984626 /* 0Small@2x.jpg */,
-				D25F916E1729678A003051EF /* 1Large.jpg */,
-				D25F916F1729678A003051EF /* 1Large@2x.jpg */,
+				D25F916F1729678A003051EF /* 1Large.jpg */,
 				D25F91701729678A003051EF /* 1Small.jpg */,
 				D25F91711729678A003051EF /* 1Small@2x.jpg */,
 			);
@@ -387,12 +386,10 @@
 				D27E3FEE17119B9700E29BAF /* Default.png in Resources */,
 				D27E3FF017119B9700E29BAF /* Default@2x.png in Resources */,
 				D27E3FF217119B9700E29BAF /* Default-568h@2x.png in Resources */,
-				D226893117287E6800984626 /* 0Large.jpg in Resources */,
-				D226893217287E6800984626 /* 0Large@2x.jpg in Resources */,
+				D226893217287E6800984626 /* 0Large.jpg in Resources */,
 				D226893317287E6800984626 /* 0Small.jpg in Resources */,
 				D226893417287E6800984626 /* 0Small@2x.jpg in Resources */,
-				D25F91721729678A003051EF /* 1Large.jpg in Resources */,
-				D25F91731729678A003051EF /* 1Large@2x.jpg in Resources */,
+				D25F91731729678A003051EF /* 1Large.jpg in Resources */,
 				D25F91741729678A003051EF /* 1Small.jpg in Resources */,
 				D25F91751729678A003051EF /* 1Small@2x.jpg in Resources */,
 			);
@@ -448,6 +445,7 @@
 				D22689211728379C00984626 /* AACUser.m in Sources */,
 				D264A2DF173C76A6005D6298 /* AACWelcomeViewController.m in Sources */,
 				D264A2E21742553C005D6298 /* AACProfileViewController.m in Sources */,
+				D264A2E51742B9D7005D6298 /* AACImageScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
