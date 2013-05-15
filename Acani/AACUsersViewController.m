@@ -60,7 +60,7 @@ static NSString *CellIdentifier = @"ACUserCell";
     user0.uniqueIdentifier = @"0";
 
     AACUser *user1 = [[AACUser alloc] init];
-    user1.bio = @"Hello! My name is Matt. I am *Amazing*, gorgeous, intelligent, genius, loving, courageous, fun, funny, healthy, wealthy, wise, playful, happy, flexible, open-minded, confident, and sexy.";
+    user1.bio = @"Hello! My name is Matt. I am *Amazing*, gorgeous, intelligent, genius, loving, courageous, fun, funny, healthy, wealthy, wise, playful, happy, flexible, open-minded, confident, and sexy. Check out my website: mattdipasquale.com";
     user1.name = @"Matt";
     user1.uniqueIdentifier = @"1";
 

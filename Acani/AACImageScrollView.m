@@ -24,6 +24,11 @@
         self.delegate = self;
         self.showsHorizontalScrollIndicator = NO;
         self.showsVerticalScrollIndicator = NO;
+
+        // Add `_doubleTapGestureRecoginzer` for `toggleZoomAction`.
+        _doubleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleZoomAction:)];
+        _doubleTapGestureRecognizer.numberOfTapsRequired = 2;
+        [self addGestureRecognizer:_doubleTapGestureRecognizer];
     }
     return self;
 }
@@ -110,6 +115,40 @@
 
     self.maximumZoomScale = maxScale;
     self.minimumZoomScale = minScale;
+}
+
+#pragma mark - Double Tap to Zoom
+
+- (void)toggleZoomAction:(UITapGestureRecognizer *)gestureRecognizer
+{
+    [self zoomToLocation:[gestureRecognizer locationInView:self]];
+}
+
+- (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center
+{
+    CGRect zoomRect;
+
+    zoomRect.size.height = self.frame.size.height / scale;
+    zoomRect.size.width  = self.frame.size.width  / scale;
+
+    zoomRect.origin.x    = center.x - (zoomRect.size.width  / 2.0);
+    zoomRect.origin.y    = center.y - (zoomRect.size.height / 2.0);
+
+    return zoomRect;
+}
+
+- (void)zoomToLocation:(CGPoint)location
+{
+    float newScale;
+    CGRect zoomRect;
+    if (self.zoomScale != self.minimumZoomScale) {
+        zoomRect = self.bounds;
+    } else {
+        newScale = self.maximumZoomScale;
+        zoomRect = [self zoomRectForScale:newScale withCenter:location];
+    }
+
+    [self zoomToRect:zoomRect animated:YES];
 }
 
 #pragma mark - Rotation Support
