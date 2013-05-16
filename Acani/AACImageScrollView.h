@@ -6,6 +6,6 @@
 
 @property (strong, nonatomic) UITapGestureRecognizer *doubleTapGestureRecognizer;
 
-- (void)displayImage:(UIImage *)image;
+- (void)setImage:(UIImage *)image;
 
 @end

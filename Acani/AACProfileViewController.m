@@ -11,7 +11,7 @@
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         _user = user;
-        self.title = _user.name;
+        self.wantsFullScreenLayout = YES;
     }
     return self;
 }
@@ -25,9 +25,8 @@
     // Add `_pictureImageScrollView`.
     _pictureImageScrollView = [[AACImageScrollView alloc] initWithFrame:self.view.frame];
     _pictureImageScrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    _pictureImageScrollView.delegate = self;
     NSString *imageName = [NSString stringWithFormat:@"%@Large.jpg", _user.uniqueIdentifier];
-    [_pictureImageScrollView displayImage:[UIImage imageNamed:imageName]];
+    [_pictureImageScrollView setImage:[UIImage imageNamed:imageName]];
     [self.view addSubview:_pictureImageScrollView];
 
     // Add `singleTapGestureRecoginzer` for `toggleChromeHiddenAction`.

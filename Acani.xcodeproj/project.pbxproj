@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D211D7191745531900A0FF65 /* 2Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D211D7161745531900A0FF65 /* 2Small.jpg */; };
+		D211D71A1745531900A0FF65 /* 2Small@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D211D7171745531900A0FF65 /* 2Small@2x.jpg */; };
+		D211D71B1745531900A0FF65 /* 2Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D211D7181745531900A0FF65 /* 2Large.jpg */; };
+		D211D71F1745543300A0FF65 /* 3Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D211D71C1745543300A0FF65 /* 3Small.jpg */; };
+		D211D7201745543300A0FF65 /* 3Small@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D211D71D1745543300A0FF65 /* 3Small@2x.jpg */; };
+		D211D7211745543300A0FF65 /* 3Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D211D71E1745543300A0FF65 /* 3Large.jpg */; };
+		D211D7281745566F00A0FF65 /* 5Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D211D7221745566F00A0FF65 /* 5Small.jpg */; };
+		D211D7291745566F00A0FF65 /* 5Small@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D211D7231745566F00A0FF65 /* 5Small@2x.jpg */; };
+		D211D72A1745566F00A0FF65 /* 4Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D211D7241745566F00A0FF65 /* 4Small.jpg */; };
+		D211D72B1745566F00A0FF65 /* 4Small@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D211D7251745566F00A0FF65 /* 4Small@2x.jpg */; };
+		D211D72C1745566F00A0FF65 /* 4Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D211D7261745566F00A0FF65 /* 4Large.jpg */; };
+		D211D72D1745566F00A0FF65 /* 5Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D211D7271745566F00A0FF65 /* 5Large.jpg */; };
 		D226891D172835A100984626 /* AACUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D226891C172835A100984626 /* AACUserCell.m */; };
 		D22689211728379C00984626 /* AACUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D22689201728379C00984626 /* AACUser.m */; };
 		D226893217287E6800984626 /* 0Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D226892E17287E6800984626 /* 0Large.jpg */; };
@@ -51,6 +63,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D211D7161745531900A0FF65 /* 2Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2Small.jpg; sourceTree = "<group>"; };
+		D211D7171745531900A0FF65 /* 2Small@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2Small@2x.jpg"; sourceTree = "<group>"; };
+		D211D7181745531900A0FF65 /* 2Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2Large.jpg; sourceTree = "<group>"; };
+		D211D71C1745543300A0FF65 /* 3Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3Small.jpg; sourceTree = "<group>"; };
+		D211D71D1745543300A0FF65 /* 3Small@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3Small@2x.jpg"; sourceTree = "<group>"; };
+		D211D71E1745543300A0FF65 /* 3Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3Large.jpg; sourceTree = "<group>"; };
+		D211D7221745566F00A0FF65 /* 5Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5Small.jpg; sourceTree = "<group>"; };
+		D211D7231745566F00A0FF65 /* 5Small@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "5Small@2x.jpg"; sourceTree = "<group>"; };
+		D211D7241745566F00A0FF65 /* 4Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4Small.jpg; sourceTree = "<group>"; };
+		D211D7251745566F00A0FF65 /* 4Small@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "4Small@2x.jpg"; sourceTree = "<group>"; };
+		D211D7261745566F00A0FF65 /* 4Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4Large.jpg; sourceTree = "<group>"; };
+		D211D7271745566F00A0FF65 /* 5Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5Large.jpg; sourceTree = "<group>"; };
 		D226891B172835A100984626 /* AACUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACUserCell.h; sourceTree = "<group>"; };
 		D226891C172835A100984626 /* AACUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUserCell.m; sourceTree = "<group>"; };
 		D226891F1728379C00984626 /* AACUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACUser.h; sourceTree = "<group>"; };
@@ -151,6 +175,18 @@
 				D25F916F1729678A003051EF /* 1Large.jpg */,
 				D25F91701729678A003051EF /* 1Small.jpg */,
 				D25F91711729678A003051EF /* 1Small@2x.jpg */,
+				D211D7181745531900A0FF65 /* 2Large.jpg */,
+				D211D7161745531900A0FF65 /* 2Small.jpg */,
+				D211D7171745531900A0FF65 /* 2Small@2x.jpg */,
+				D211D71E1745543300A0FF65 /* 3Large.jpg */,
+				D211D71C1745543300A0FF65 /* 3Small.jpg */,
+				D211D71D1745543300A0FF65 /* 3Small@2x.jpg */,
+				D211D7261745566F00A0FF65 /* 4Large.jpg */,
+				D211D7241745566F00A0FF65 /* 4Small.jpg */,
+				D211D7251745566F00A0FF65 /* 4Small@2x.jpg */,
+				D211D7271745566F00A0FF65 /* 5Large.jpg */,
+				D211D7221745566F00A0FF65 /* 5Small.jpg */,
+				D211D7231745566F00A0FF65 /* 5Small@2x.jpg */,
 			);
 			name = Pictures;
 			sourceTree = "<group>";
@@ -392,6 +428,18 @@
 				D25F91731729678A003051EF /* 1Large.jpg in Resources */,
 				D25F91741729678A003051EF /* 1Small.jpg in Resources */,
 				D25F91751729678A003051EF /* 1Small@2x.jpg in Resources */,
+				D211D7191745531900A0FF65 /* 2Small.jpg in Resources */,
+				D211D71A1745531900A0FF65 /* 2Small@2x.jpg in Resources */,
+				D211D71B1745531900A0FF65 /* 2Large.jpg in Resources */,
+				D211D71F1745543300A0FF65 /* 3Small.jpg in Resources */,
+				D211D7201745543300A0FF65 /* 3Small@2x.jpg in Resources */,
+				D211D7211745543300A0FF65 /* 3Large.jpg in Resources */,
+				D211D7281745566F00A0FF65 /* 5Small.jpg in Resources */,
+				D211D7291745566F00A0FF65 /* 5Small@2x.jpg in Resources */,
+				D211D72A1745566F00A0FF65 /* 4Small.jpg in Resources */,
+				D211D72B1745566F00A0FF65 /* 4Small@2x.jpg in Resources */,
+				D211D72C1745566F00A0FF65 /* 4Large.jpg in Resources */,
+				D211D72D1745566F00A0FF65 /* 5Large.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

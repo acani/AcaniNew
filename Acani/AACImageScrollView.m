@@ -1,6 +1,6 @@
 #import "AACImageScrollView.h"
 
-@interface AACImageScrollView () <UIScrollViewDelegate> {
+@interface AACImageScrollView () <UIScrollViewDelegate, UIActionSheetDelegate> {
     UIImageView *_imageView;
 
     CGSize _imageSize;
@@ -20,15 +20,19 @@
     self = [super initWithFrame:frame];
     if (self)
     {
-        self.decelerationRate = UIScrollViewDecelerationRateFast;
+        self.decelerationRate = UIScrollViewDecelerationRateFast; // good?
         self.delegate = self;
         self.showsHorizontalScrollIndicator = NO;
         self.showsVerticalScrollIndicator = NO;
 
-        // Add `_doubleTapGestureRecoginzer` for `toggleZoomAction`.
+        // Add `_doubleTapGestureRecognizer` for `toggleZoomAction:`.
         _doubleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleZoomAction:)];
         _doubleTapGestureRecognizer.numberOfTapsRequired = 2;
         [self addGestureRecognizer:_doubleTapGestureRecognizer];
+
+        // Add `longPressGestureRecognizer` for `saveOrCopyAction:`.
+        UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(saveOrCopyAction:)];
+        [self addGestureRecognizer:longPressGestureRecognizer];
     }
     return self;
 }
@@ -82,10 +86,14 @@
 
 #pragma mark - `scrollView` Configuration
 
-- (void)displayImage:(UIImage *)image
+- (void)setImage:(UIImage *)image
 {
     _imageView = [[UIImageView alloc] initWithImage:image];
+//    _imageView = [[UIImageView alloc] initWithFrame:self.frame];
+//    _imageView.contentMode = UIViewContentModeScaleAspectFit;
+//    _imageView.image = image;
     [self addSubview:_imageView];
+
     _imageSize = image.size;
     self.contentSize = _imageSize;
     [self setMaxMinZoomScalesForCurrentBounds];
@@ -121,7 +129,9 @@
 
 - (void)toggleZoomAction:(UITapGestureRecognizer *)gestureRecognizer
 {
-    [self zoomToLocation:[gestureRecognizer locationInView:self]];
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        [self zoomToLocation:[gestureRecognizer locationInView:self]];
+    }
 }
 
 - (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center
@@ -149,6 +159,14 @@
     }
 
     [self zoomToRect:zoomRect animated:YES];
+}
+
+- (void)saveOrCopyAction:(UILongPressGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", nil) destructiveButtonTitle:nil otherButtonTitles:NSLocalizedString(@"Save Picture", nil), NSLocalizedString(@"Copy", nil), nil];
+        [actionSheet showInView:self];
+    }
 }
 
 #pragma mark - Rotation Support
@@ -206,6 +224,22 @@
 - (CGPoint)minimumContentOffset
 {
     return CGPointZero;
+}
+
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    // TODO: Both cases below slightly alter the image.
+    // To fix, use the actual data downloaded and stored as a file.
+    switch (buttonIndex) {
+        case 0: // Save Picture
+            UIImageWriteToSavedPhotosAlbum(_imageView.image, nil, NULL, NULL);
+            break;
+        case 1: // Copy
+            [[UIPasteboard generalPasteboard] setData:UIImageJPEGRepresentation(_imageView.image, 0.8) forPasteboardType:@"public.jpeg"];
+            break;
+    }
 }
 
 @end
