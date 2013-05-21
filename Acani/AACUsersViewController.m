@@ -8,6 +8,12 @@
 
 static NSString *CellIdentifier = @"ACUserCell";
 
+CGFloat AACStatusBarHeight()
+{
+    CGSize statusBarSize = [[UIApplication sharedApplication] statusBarFrame].size;
+    return MIN(statusBarSize.width, statusBarSize.height);
+}
+
 @interface AACUsersViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 @end
 
@@ -97,10 +103,7 @@ static NSString *CellIdentifier = @"ACUserCell";
 {
     [super viewWillAppear:animated];
 
-    CGSize statusBarSize = [UIApplication sharedApplication].statusBarFrame.size;
-    BOOL isPortrait = self.interfaceOrientation == UIInterfaceOrientationPortrait;
-    CGFloat statusBarHeight = (isPortrait ? statusBarSize.height : statusBarSize.width);
-    CGFloat top = statusBarHeight + self.navigationController.navigationBar.frame.size.height;
+    CGFloat top = AACStatusBarHeight() + self.navigationController.navigationBar.frame.size.height;
     UIEdgeInsets insets = UIEdgeInsetsMake(top, 0, 0, 0);
     self.collectionView.contentInset = insets;
     self.collectionView.scrollIndicatorInsets = insets;
@@ -110,17 +113,21 @@ static NSString *CellIdentifier = @"ACUserCell";
 {
     [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
 
+    // TODO: How do I get `navigationBarHeight` programmatically, without hard coding it, in case it's changed in a future version of iOS.
     CGFloat fontSize;
-    UIEdgeInsets insets;
+    CGFloat navigationBarHeight;
     if (toInterfaceOrientation == UIInterfaceOrientationPortrait) {
         fontSize = TITLE_FONT_SIZE_PORTRAIT;
-        insets = UIEdgeInsetsMake(44, 0, 0, 0);
+        navigationBarHeight = 44;
     } else {
-        insets = UIEdgeInsetsMake(32, 0, 0, 0);
         fontSize = TITLE_FONT_SIZE_LANDSCAPE;
+        navigationBarHeight = 32;
     }
+
     UILabel *logoLabel = (UILabel *)self.navigationItem.titleView;
     logoLabel.font = [UIFont fontWithName:@"AvenirNext-Heavy" size:fontSize];
+
+    UIEdgeInsets insets = UIEdgeInsetsMake(AACStatusBarHeight()+navigationBarHeight, 0, 0, 0);
     self.collectionView.contentInset = insets;
     self.collectionView.scrollIndicatorInsets = insets;
 }
