@@ -56,6 +56,7 @@
 		D2EE946C174D9D750046704E /* 7Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2EE946A174D9D750046704E /* 7Large.jpg */; };
 		D2EE946D174D9D750046704E /* 7Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2EE946B174D9D750046704E /* 7Small.jpg */; };
 		D2EE94701754DCBD0046704E /* AACPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EE946F1754DCBD0046704E /* AACPageViewController.m */; };
+		D2EE94731755315C0046704E /* AACEditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EE94721755315B0046704E /* AACEditProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,8 @@
 		D2EE946B174D9D750046704E /* 7Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7Small.jpg; sourceTree = "<group>"; };
 		D2EE946E1754DCBD0046704E /* AACPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACPageViewController.h; sourceTree = "<group>"; };
 		D2EE946F1754DCBD0046704E /* AACPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACPageViewController.m; sourceTree = "<group>"; };
+		D2EE94711755315B0046704E /* AACEditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACEditProfileViewController.h; sourceTree = "<group>"; };
+		D2EE94721755315B0046704E /* AACEditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACEditProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,6 +355,8 @@
 		D27E40161711A71A00E29BAF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D2EE94711755315B0046704E /* AACEditProfileViewController.h */,
+				D2EE94721755315B0046704E /* AACEditProfileViewController.m */,
 				D2EE946E1754DCBD0046704E /* AACPageViewController.h */,
 				D2EE946F1754DCBD0046704E /* AACPageViewController.m */,
 				D264A2E01742553C005D6298 /* AACProfileViewController.h */,
@@ -520,6 +525,7 @@
 				D264A2E21742553C005D6298 /* AACProfileViewController.m in Sources */,
 				D264A2E51742B9D7005D6298 /* AACImageScrollView.m in Sources */,
 				D2EE94701754DCBD0046704E /* AACPageViewController.m in Sources */,
+				D2EE94731755315C0046704E /* AACEditProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

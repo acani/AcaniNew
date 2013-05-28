@@ -8,9 +8,11 @@ typedef NS_ENUM(NSInteger, AACUserPictureType) {
 @interface AACUser : NSObject
 
 @property (nonatomic, copy) NSString *bio;
-@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *firstName;
+@property (nonatomic, copy) NSString *lastName;
 @property (nonatomic, copy) NSString *uniqueIdentifier;
 
+- (NSString *)name;
 - (NSString *)pictureNameOfType:(AACUserPictureType)pictureType;
 
 @end

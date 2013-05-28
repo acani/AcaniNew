@@ -12,7 +12,7 @@
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         _user = user;
-        self.title = user.name;
+        self.title = [user name];
         self.wantsFullScreenLayout = YES;
     }
     return self;

@@ -24,15 +24,15 @@
 - (void)specProperties
 {
     STAssertNil(_user.bio, nil);
-    STAssertNil(_user.name, nil);
+    STAssertNil([_user name], nil);
     STAssertNil(_user.uniqueIdentifier, nil);
 
     _user.bio = @"Hello! My name is Lauren.";
-    _user.name = @"Lauren";
+    _user.firstName = @"Lauren";
     _user.uniqueIdentifier = @"0";
 
     STAssertEqualObjects(_user.bio, @"Hello! My name is Lauren.", nil);
-    STAssertEqualObjects(_user.name, @"Lauren", nil);
+    STAssertEqualObjects([_user name], @"Lauren", nil);
     STAssertEqualObjects(_user.uniqueIdentifier, @"0", nil);
 }
 

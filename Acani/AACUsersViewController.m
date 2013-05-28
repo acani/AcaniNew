@@ -1,3 +1,4 @@
+#import "AACEditProfileViewController.h"
 #import "AACPageViewController.h"
 #import "AACProfileViewController.h"
 #import "AACUser.h"
@@ -71,45 +72,49 @@ CGFloat AACStatusBarHeight()
 
     AACUser *user0 = [[AACUser alloc] init];
     user0.bio = @"Hello! My name is Lauren. I am *Amazing*, gorgeous, intelligent, genius, loving, courageous, fun, funny, healthy, wealthy, wise, playful, happy, flexible, open-minded, confident, and sexy.";
-    user0.name = @"Lauren";
+    user0.firstName = @"Lauren";
+    user0.lastName = @"Di Pasquale";
     user0.uniqueIdentifier = @"0";
 
     AACUser *user1 = [[AACUser alloc] init];
     user1.bio = @"Hello! My name is Matt. I am *Amazing*, gorgeous, intelligent, genius, loving, courageous, fun, funny, healthy, wealthy, wise, playful, happy, flexible, open-minded, confident, and sexy. Check out my website: mattdipasquale.com";
-    user1.name = @"Matt";
+    user1.firstName = @"Matt";
     user1.uniqueIdentifier = @"1";
 
     AACUser *user2 = [[AACUser alloc] init];
     user2.bio = @"Hello! My name is Earth. I am big & round, magnificent!";
-    user2.name = @"Earth";
+    user2.firstName = @"Earth";
     user2.uniqueIdentifier = @"2";
 
     AACUser *user3 = [[AACUser alloc] init];
     user3.bio = @"Hello! My name is Nature. I am beautiful.";
-    user3.name = @"Nature";
+    user3.firstName = @"Nature";
     user3.uniqueIdentifier = @"3";
 
     AACUser *user4 = [[AACUser alloc] init];
     user4.bio = @"Hello! My name is Beach. I am amazing.";
-    user4.name = @"Beach";
+    user4.firstName = @"Beach";
     user4.uniqueIdentifier = @"4";
 
     AACUser *user5 = [[AACUser alloc] init];
     user5.bio = @"Hello! My name is Courage. I am wise.";
-    user5.name = @"Courage";
+    user5.firstName = @"Courage";
     user5.uniqueIdentifier = @"5";
 
     AACUser *user6 = [[AACUser alloc] init];
     user6.bio = @"Hello! My name is Leadership. I am creative.";
-    user6.name = @"Leadership";
+    user6.firstName = @"Leadership";
     user6.uniqueIdentifier = @"6";
 
     AACUser *user7 = [[AACUser alloc] init];
     user7.bio = @"Hello! My name is GitHub. I am collaborative.";
-    user7.name = @"GitHub";
+    user7.firstName = @"GitHub";
     user7.uniqueIdentifier = @"7";
 
     _users = @[user0, user1, user2, user3, user4, user5, user6, user7];
+
+    // Temporary
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Edit Profile", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(editProfileAction)];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -145,6 +150,14 @@ CGFloat AACStatusBarHeight()
     self.collectionView.scrollIndicatorInsets = insets;
 }
 
+#pragma mark - Actions
+
+- (void)editProfileAction
+{
+    AACEditProfileViewController *editProfileViewController = [[AACEditProfileViewController alloc] initWithUser:_users[0]];
+    [self.navigationController pushViewController:editProfileViewController animated:YES];
+}
+
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -158,7 +171,7 @@ CGFloat AACStatusBarHeight()
     AACUser *user = _users[indexPath.item];
     UIImage *pictureImage = [UIImage imageNamed:[user pictureNameOfType:AACUserPictureTypeSmall]];
     ((UIImageView *)cell.backgroundView).image = pictureImage;
-    cell.nameLabel.text = user.name;
+    cell.nameLabel.text = user.firstName;
     return cell;
 }
 
