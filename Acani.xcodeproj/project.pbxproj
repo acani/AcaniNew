@@ -50,6 +50,12 @@
 		D27E400317119B9800E29BAF /* NSInvocation+SetTestMethodPrefixToSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D27E400217119B9800E29BAF /* NSInvocation+SetTestMethodPrefixToSpec.m */; };
 		D27E400517119B9800E29BAF /* AACAppDelegateSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D27E400417119B9800E29BAF /* AACAppDelegateSpecs.m */; };
 		D27E40151711A3F400E29BAF /* AACUsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27E40141711A3F400E29BAF /* AACUsersViewController.m */; };
+		D2EE9467174BFD6C0046704E /* 6Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2EE9464174BFD6C0046704E /* 6Large.jpg */; };
+		D2EE9468174BFD6C0046704E /* 6Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2EE9465174BFD6C0046704E /* 6Small.jpg */; };
+		D2EE9469174BFD6C0046704E /* 6Small@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2EE9466174BFD6C0046704E /* 6Small@2x.jpg */; };
+		D2EE946C174D9D750046704E /* 7Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2EE946A174D9D750046704E /* 7Large.jpg */; };
+		D2EE946D174D9D750046704E /* 7Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2EE946B174D9D750046704E /* 7Small.jpg */; };
+		D2EE94701754DCBD0046704E /* AACPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EE946F1754DCBD0046704E /* AACPageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +125,13 @@
 		D27E40131711A3F400E29BAF /* AACUsersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACUsersViewController.h; sourceTree = "<group>"; };
 		D27E40141711A3F400E29BAF /* AACUsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUsersViewController.m; sourceTree = "<group>"; };
 		D29CA2AF1735DAD600B5052B /* AACDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AACDefines.h; sourceTree = "<group>"; };
+		D2EE9464174BFD6C0046704E /* 6Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6Large.jpg; sourceTree = "<group>"; };
+		D2EE9465174BFD6C0046704E /* 6Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6Small.jpg; sourceTree = "<group>"; };
+		D2EE9466174BFD6C0046704E /* 6Small@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "6Small@2x.jpg"; sourceTree = "<group>"; };
+		D2EE946A174D9D750046704E /* 7Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7Large.jpg; sourceTree = "<group>"; };
+		D2EE946B174D9D750046704E /* 7Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7Small.jpg; sourceTree = "<group>"; };
+		D2EE946E1754DCBD0046704E /* AACPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACPageViewController.h; sourceTree = "<group>"; };
+		D2EE946F1754DCBD0046704E /* AACPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACPageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +200,11 @@
 				D211D7271745566F00A0FF65 /* 5Large.jpg */,
 				D211D7221745566F00A0FF65 /* 5Small.jpg */,
 				D211D7231745566F00A0FF65 /* 5Small@2x.jpg */,
+				D2EE9464174BFD6C0046704E /* 6Large.jpg */,
+				D2EE9465174BFD6C0046704E /* 6Small.jpg */,
+				D2EE9466174BFD6C0046704E /* 6Small@2x.jpg */,
+				D2EE946A174D9D750046704E /* 7Large.jpg */,
+				D2EE946B174D9D750046704E /* 7Small.jpg */,
 			);
 			name = Pictures;
 			sourceTree = "<group>";
@@ -334,6 +352,8 @@
 		D27E40161711A71A00E29BAF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D2EE946E1754DCBD0046704E /* AACPageViewController.h */,
+				D2EE946F1754DCBD0046704E /* AACPageViewController.m */,
 				D264A2E01742553C005D6298 /* AACProfileViewController.h */,
 				D264A2E11742553C005D6298 /* AACProfileViewController.m */,
 				D27E40131711A3F400E29BAF /* AACUsersViewController.h */,
@@ -440,6 +460,11 @@
 				D211D72B1745566F00A0FF65 /* 4Small@2x.jpg in Resources */,
 				D211D72C1745566F00A0FF65 /* 4Large.jpg in Resources */,
 				D211D72D1745566F00A0FF65 /* 5Large.jpg in Resources */,
+				D2EE9467174BFD6C0046704E /* 6Large.jpg in Resources */,
+				D2EE9468174BFD6C0046704E /* 6Small.jpg in Resources */,
+				D2EE9469174BFD6C0046704E /* 6Small@2x.jpg in Resources */,
+				D2EE946C174D9D750046704E /* 7Large.jpg in Resources */,
+				D2EE946D174D9D750046704E /* 7Small.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +519,7 @@
 				D264A2DF173C76A6005D6298 /* AACWelcomeViewController.m in Sources */,
 				D264A2E21742553C005D6298 /* AACProfileViewController.m in Sources */,
 				D264A2E51742B9D7005D6298 /* AACImageScrollView.m in Sources */,
+				D2EE94701754DCBD0046704E /* AACPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

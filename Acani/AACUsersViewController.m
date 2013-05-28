@@ -1,3 +1,4 @@
+#import "AACPageViewController.h"
 #import "AACProfileViewController.h"
 #import "AACUser.h"
 #import "AACUserCell.h"
@@ -8,9 +9,11 @@
 
 static NSString *CellIdentifier = @"ACUserCell";
 
+// HACK: Status bar width & height are swapped in landscape mode.
+// http://stackoverflow.com/a/16598350/242933
 CGFloat AACStatusBarHeight()
 {
-    CGSize statusBarSize = [[UIApplication sharedApplication] statusBarFrame].size;
+    CGSize statusBarSize = [UIApplication sharedApplication].statusBarFrame.size;
     return MIN(statusBarSize.width, statusBarSize.height);
 }
 
@@ -96,7 +99,17 @@ CGFloat AACStatusBarHeight()
     user5.name = @"Courage";
     user5.uniqueIdentifier = @"5";
 
-    _users = @[user0, user1, user2, user3, user4, user5];
+    AACUser *user6 = [[AACUser alloc] init];
+    user6.bio = @"Hello! My name is Leadership. I am creative.";
+    user6.name = @"Leadership";
+    user6.uniqueIdentifier = @"6";
+
+    AACUser *user7 = [[AACUser alloc] init];
+    user7.bio = @"Hello! My name is GitHub. I am collaborative.";
+    user7.name = @"GitHub";
+    user7.uniqueIdentifier = @"7";
+
+    _users = @[user0, user1, user2, user3, user4, user5, user6, user7];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -144,7 +157,7 @@ CGFloat AACStatusBarHeight()
     AACUserCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     AACUser *user = _users[indexPath.item];
     UIImage *pictureImage = [UIImage imageNamed:[user pictureNameOfType:AACUserPictureTypeSmall]];
-    cell.backgroundColor = [UIColor colorWithPatternImage:pictureImage];
+    ((UIImageView *)cell.backgroundView).image = pictureImage;
     cell.nameLabel.text = user.name;
     return cell;
 }
@@ -154,13 +167,9 @@ CGFloat AACStatusBarHeight()
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     AACUser *user = _users[indexPath.item];
-    AACProfileViewController *profileViewController = [[AACProfileViewController alloc] initWithUser:user];
-    UIPageViewController *pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    AACPageViewController *pageViewController = [[AACPageViewController alloc] initWithUser:user];
     pageViewController.dataSource = self;
     pageViewController.delegate = self;
-    pageViewController.title = user.name;
-    pageViewController.wantsFullScreenLayout = YES;
-    [pageViewController setViewControllers:@[profileViewController] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     [self.navigationController pushViewController:pageViewController animated:YES];
 }
 
@@ -180,10 +189,12 @@ CGFloat AACStatusBarHeight()
 
 #pragma mark - UIPageViewControllerDelegate
 
-- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
+- (void)pageViewController:(AACPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
 {
     if (completed) {
-        pageViewController.title = ((AACProfileViewController *)[pageViewController.viewControllers lastObject]).user.name;
+        AACProfileViewController *profileViewController = (AACProfileViewController *)[pageViewController.viewControllers lastObject];
+        pageViewController.title = profileViewController.title;
+        pageViewController.bioTextView.text = profileViewController.user.bio;
     }
 }
 

@@ -7,5 +7,6 @@
 @property (strong, nonatomic) UITapGestureRecognizer *doubleTapGestureRecognizer;
 
 - (void)setImage:(UIImage *)image;
+- (void)setZoomScale;
 
 @end

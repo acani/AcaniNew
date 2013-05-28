@@ -10,6 +10,12 @@
     if (self) {
         self.backgroundColor = [UIColor lightGrayColor];
 
+        // Create `self.backgroundView` & `self.selectedBackgroundView` for picture.
+        self.backgroundView = [[UIImageView alloc] initWithFrame:frame];
+        UIView *selectedBackgroundView = [[UIView alloc] initWithFrame:frame];
+        selectedBackgroundView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+        self.selectedBackgroundView = selectedBackgroundView;
+
         // Create `_nameLabel`.
         _nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(3, 0, 75-3, 16)];
         _nameLabel.backgroundColor = [UIColor clearColor];
