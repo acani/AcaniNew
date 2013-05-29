@@ -38,6 +38,15 @@
     profilePictureButton.accessibilityLabel = NSLocalizedString(@"Profile Picture", nil);
     [profilePictureButton addTarget:self action:@selector(editProfilePictureAction) forControlEvents:UIControlEventTouchUpInside];
     [tableHeaderView addSubview:profilePictureButton];
+    
+    UILabel *editPictureLabel = [[UILabel alloc] initWithFrame:profilePictureButton.bounds];
+    editPictureLabel.frame = CGRectMake(0, 45, 60, 15);
+    editPictureLabel.textColor = [UIColor whiteColor];
+    editPictureLabel.text = @"Tap to Edit";
+    editPictureLabel.textAlignment = NSTextAlignmentCenter;
+    editPictureLabel.font = [UIFont boldSystemFontOfSize:10];
+    [editPictureLabel setBackgroundColor:[UIColor colorWithWhite:0.0 alpha:0.5]];
+    [profilePictureButton addSubview:editPictureLabel];
 
     // Add `nameLabel` to `tableHeaderView`.
     UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(86, 30, 230, 21)];
