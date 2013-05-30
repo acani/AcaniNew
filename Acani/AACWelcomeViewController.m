@@ -53,7 +53,7 @@
     NSString *facebookAccessToken = @"FACEBOOK_ACCESS_TOKEN";
     NSLog(@"facebookAccessToken: %@", facebookAccessToken);
 
-    [FBSession openActiveSessionWithAllowLoginUI:YES]; // TODO: get this working
+//    [FBSession openActiveSessionWithAllowLoginUI:YES]; // TODO: get this working
 }
 
 @end

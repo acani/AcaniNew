@@ -20,6 +20,7 @@
     {
         self.backgroundColor = [UIColor blackColor];              // triggers gesture recognizers
         self.decelerationRate = UIScrollViewDecelerationRateFast;
+
         self.delegate = self;
         self.showsHorizontalScrollIndicator = NO;
         self.showsVerticalScrollIndicator = NO;

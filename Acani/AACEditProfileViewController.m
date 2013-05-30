@@ -39,13 +39,14 @@
     [profilePictureButton addTarget:self action:@selector(editProfilePictureAction) forControlEvents:UIControlEventTouchUpInside];
     [tableHeaderView addSubview:profilePictureButton];
     
-    UILabel *editPictureLabel = [[UILabel alloc] initWithFrame:profilePictureButton.bounds];
-    editPictureLabel.frame = CGRectMake(0, 45, 60, 15);
-    editPictureLabel.textColor = [UIColor whiteColor];
-    editPictureLabel.text = @"Tap to Edit";
-    editPictureLabel.textAlignment = NSTextAlignmentCenter;
+    // Add `editPictureLabel` as a subview of `profilePictureButton`.
+    UILabel *editPictureLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 45, 60, 15)];
+    editPictureLabel.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
     editPictureLabel.font = [UIFont boldSystemFontOfSize:10];
-    [editPictureLabel setBackgroundColor:[UIColor colorWithWhite:0.0 alpha:0.5]];
+    editPictureLabel.text = NSLocalizedString(@"Tap to Edit", nil);
+    editPictureLabel.textAlignment = NSTextAlignmentCenter;
+    editPictureLabel.textColor = [UIColor whiteColor];
+    editPictureLabel.userInteractionEnabled = NO;
     [profilePictureButton addSubview:editPictureLabel];
 
     // Add `nameLabel` to `tableHeaderView`.
