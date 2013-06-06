@@ -4,10 +4,14 @@
 
 - (NSString *)name
 {
-    if ([_lastName length]) {
-        return [_firstName stringByAppendingFormat:@" %@", _lastName];
+    if ([_firstName length]) {
+        if ([_lastName length]) {
+            return [_firstName stringByAppendingFormat:@" %@", _lastName];
+        } else {
+            return _firstName;
+        }
     } else {
-        return _firstName;
+        return (_lastName ? _lastName : _firstName);
     }
 }
 

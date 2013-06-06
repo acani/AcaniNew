@@ -1,7 +1,7 @@
-#import <SenTestingKit/SenTestingKit.h>
+#import "AACSpecs.h"
 #import "AACUserCell.h"
 
-@interface AACUserCellSpecs : SenTestCase @end
+@interface AACUserCellSpecs : AACSpecs @end
 
 @implementation AACUserCellSpecs {
     AACUserCell *_userCell;
@@ -11,7 +11,7 @@
 
 - (void)setUp
 {
-    _userCell = [[AACUserCell alloc] initWithFrame:CGRectMake(4, 4, 75, 75)];
+    _userCell = [[AACUserCell alloc] initWithFrame:CGRectMake(0, 0, 75, 75)];
 }
 
 - (void)tearDown
@@ -19,13 +19,33 @@
     _userCell = nil;
 }
 
+#pragma mark - NSObject
+
+- (void)spec_superclass
+{
+    STAssertEquals([AACUserCell superclass], [UICollectionViewCell class], nil);
+}
+
 #pragma mark - UIView
 
-- (void)specInitWithFrame
+- (void)specInitWithFrame_
 {
-    // Spec `nameLabel`.
+    STAssertEquals(_userCell.backgroundColor, [UIColor lightGrayColor], nil);
+
+    UIImageView *backgroundView = (UIImageView *)_userCell.backgroundView;
+    STAssertNotNil(backgroundView, nil);
+    STAssertEquals([backgroundView class], [UIImageView class], nil);
+    STAssertEquals(backgroundView.frame, _userCell.frame, nil);
+
+    UIView *selectedBackgroundView = _userCell.selectedBackgroundView;
+    STAssertNotNil(selectedBackgroundView, nil);
+    STAssertEquals([selectedBackgroundView class], [UIView class], nil);
+    STAssertEquals(selectedBackgroundView.frame, _userCell.frame, nil);
+    STAssertEqualObjects(selectedBackgroundView.backgroundColor, [UIColor colorWithWhite:0 alpha:0.5], nil);
+
     UILabel *nameLabel = _userCell.nameLabel;
     STAssertNotNil(nameLabel, nil);
+    STAssertEquals([nameLabel class], [UILabel class], nil);
     STAssertEquals(nameLabel.frame, CGRectMake(3, 0, 75-3, 16), nil);
     STAssertEqualObjects(nameLabel.backgroundColor, [UIColor clearColor], nil);
     STAssertEqualObjects(nameLabel.font, [UIFont boldSystemFontOfSize:12], nil);

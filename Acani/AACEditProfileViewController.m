@@ -10,6 +10,7 @@
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         _user = user;
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Save", nil) style:UIBarButtonItemStyleDone target:self action:@selector(saveProfileAction)];
         self.title = NSLocalizedString(@"Edit Profile", nil);
     }
     return self;
@@ -27,42 +28,37 @@
 {
     [super viewDidLoad];
 
-    // Create `tableHeaderView`.
+    self.tableView.rowHeight = 72;
+
     UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 60+16*2-10)];
 
-    // Add `profilePictureButton` to `tableHeaderView`.
     UIButton *profilePictureButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    profilePictureButton.accessibilityLabel = NSLocalizedString(@"Profile Picture", nil);
     profilePictureButton.frame = CGRectMake(12, 16, 60, 60);
     UIImage *pictureImage = [UIImage imageNamed:[_user pictureNameOfType:AACUserPictureTypeSmall]];
     [profilePictureButton setBackgroundImage:pictureImage forState:UIControlStateNormal];
-    profilePictureButton.accessibilityLabel = NSLocalizedString(@"Profile Picture", nil);
     [profilePictureButton addTarget:self action:@selector(editProfilePictureAction) forControlEvents:UIControlEventTouchUpInside];
     [tableHeaderView addSubview:profilePictureButton];
     
-    // Add `editPictureLabel` as a subview of `profilePictureButton`.
     UILabel *editPictureLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 45, 60, 15)];
     editPictureLabel.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
     editPictureLabel.font = [UIFont boldSystemFontOfSize:10];
-    editPictureLabel.text = NSLocalizedString(@"Tap to Edit", nil);
+    editPictureLabel.text = NSLocalizedString(@"edit", nil);
     editPictureLabel.textAlignment = NSTextAlignmentCenter;
     editPictureLabel.textColor = [UIColor whiteColor];
     editPictureLabel.userInteractionEnabled = NO;
     [profilePictureButton addSubview:editPictureLabel];
 
-    // Add `nameLabel` to `tableHeaderView`.
-    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(86, 30, 230, 21)];
-    nameLabel.font = [UIFont boldSystemFontOfSize:16];
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(86, 30, 224, 21)];
+    nameLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     nameLabel.backgroundColor = [UIColor clearColor];
-    nameLabel.text = [_user name];
+    nameLabel.font = [UIFont boldSystemFontOfSize:16];
     nameLabel.shadowColor = [UIColor whiteColor];
     nameLabel.shadowOffset = CGSizeMake(0, 1);
+    nameLabel.text = [_user name];
     [tableHeaderView addSubview:nameLabel];
 
     self.tableView.tableHeaderView = tableHeaderView;
-
-    self.tableView.rowHeight = 72;
-
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Save", nil) style:UIBarButtonItemStyleDone target:self action:@selector(saveProfileAction)];
 }
 
 #pragma mark - Actions
@@ -98,11 +94,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
     UITextView *bioTextView;
-
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
 
-        // Add `bioTextView`.
         bioTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, 4, cell.contentView.frame.size.width, 64)];
         bioTextView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         bioTextView.backgroundColor = [UIColor clearColor];

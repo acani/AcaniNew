@@ -16,21 +16,17 @@
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self)
-    {
+    if (self) {
         self.backgroundColor = [UIColor blackColor];              // triggers gesture recognizers
         self.decelerationRate = UIScrollViewDecelerationRateFast;
-
         self.delegate = self;
         self.showsHorizontalScrollIndicator = NO;
         self.showsVerticalScrollIndicator = NO;
 
-        // Add `_doubleTapGestureRecognizer` for `toggleZoomAction:`.
         _doubleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleZoomAction:)];
         _doubleTapGestureRecognizer.numberOfTapsRequired = 2;
         [self addGestureRecognizer:_doubleTapGestureRecognizer];
 
-        // Add `longPressGestureRecognizer` for `saveOrCopyAction:`.
         UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(saveOrCopyAction:)];
         [self addGestureRecognizer:longPressGestureRecognizer];
     }

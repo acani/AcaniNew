@@ -1,4 +1,7 @@
+#import "AACApplication.h"
+#import "AACDefines.h"
 #import "AACEditProfileViewController.h"
+#import "AACLogoLabel.h"
 #import "AACPageViewController.h"
 #import "AACProfileViewController.h"
 #import "AACUser.h"
@@ -9,14 +12,6 @@
 #define TITLE_FONT_SIZE_LANDSCAPE 20
 
 static NSString *CellIdentifier = @"ACUserCell";
-
-// HACK: Status bar width & height are swapped in landscape mode.
-// http://stackoverflow.com/a/16598350/242933
-CGFloat AACStatusBarHeight()
-{
-    CGSize statusBarSize = [UIApplication sharedApplication].statusBarFrame.size;
-    return MIN(statusBarSize.width, statusBarSize.height);
-}
 
 @interface AACUsersViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 @end
@@ -29,7 +24,6 @@ CGFloat AACStatusBarHeight()
 
 - (id)init
 {
-    // Create `layout`.
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.itemSize = CGSizeMake(75, 75);
     layout.minimumInteritemSpacing = 4;
@@ -40,15 +34,10 @@ CGFloat AACStatusBarHeight()
         self.title = NSLocalizedString(@"Users", nil); // for back button of pushed page
         self.wantsFullScreenLayout = YES;
 
-        // Create `logoLabel`.
-        UILabel *logoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
-        logoLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
-        logoLabel.backgroundColor = [UIColor clearColor];
+        AACLogoLabel *logoLabel = [[AACLogoLabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
+        logoLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         logoLabel.font = [UIFont fontWithName:@"AvenirNext-Heavy" size:TITLE_FONT_SIZE_PORTRAIT];
-        logoLabel.shadowColor = [UIColor colorWithWhite:0 alpha:0.5];
-        logoLabel.text = [[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"] lowercaseString]; // acani
-        logoLabel.textAlignment = NSTextAlignmentCenter;
-        logoLabel.textColor = [UIColor whiteColor];
+        logoLabel.shadowOffset = CGSizeMake(0, -1);
         self.navigationItem.titleView = logoLabel;
     }
     return self;

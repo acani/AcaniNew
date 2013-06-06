@@ -1,7 +1,7 @@
-#import <SenTestingKit/SenTestingKit.h>
+#import "AACSpecs.h"
 #import "AACUser.h"
 
-@interface AACUserSpecs : SenTestCase @end
+@interface AACUserSpecs : AACSpecs @end
 
 @implementation AACUserSpecs {
     AACUser *_user;
@@ -19,24 +19,56 @@
     _user = nil;
 }
 
+#pragma mark - NSObject
+
+- (void)spec_superclass
+{
+    STAssertEquals([AACUser superclass], [NSObject class], nil);
+}
+
 #pragma mark - AACUser
 
-- (void)specProperties
+- (void)specBio
 {
     STAssertNil(_user.bio, nil);
-    STAssertNil([_user name], nil);
-    STAssertNil(_user.uniqueIdentifier, nil);
-
     _user.bio = @"Hello! My name is Lauren.";
-    _user.firstName = @"Lauren";
-    _user.uniqueIdentifier = @"0";
-
     STAssertEqualObjects(_user.bio, @"Hello! My name is Lauren.", nil);
-    STAssertEqualObjects([_user name], @"Lauren", nil);
+}
+
+- (void)specFirstName
+{
+    STAssertNil(_user.firstName, nil);
+    _user.firstName = @"Lauren";
+    STAssertEqualObjects(_user.firstName, @"Lauren", nil);
+}
+
+- (void)specLastName
+{
+    STAssertNil(_user.lastName, nil);
+    _user.lastName = @"Di Pasquale";
+    STAssertEqualObjects(_user.lastName, @"Di Pasquale", nil);
+}
+
+- (void)specUniqueIdentifier
+{
+    STAssertNil(_user.uniqueIdentifier, nil);
+    _user.uniqueIdentifier = @"0";
     STAssertEqualObjects(_user.uniqueIdentifier, @"0", nil);
 }
 
-- (void)specPictureNameOfType
+- (void)specName
+{
+    _user.firstName = @"Lauren";
+    STAssertEqualObjects([_user name], @"Lauren", nil);
+
+    _user.lastName = @"Di Pasquale";
+    STAssertEqualObjects([_user name], @"Lauren Di Pasquale", nil);
+
+    _user.firstName = @"";
+    STAssertEqualObjects([_user name], @"Di Pasquale", nil);
+}
+
+- (void)specPictureNameOfType_
 {
     _user.uniqueIdentifier = @"0";
     STAssertEqualObjects([_user pictureNameOfType:AACUserPictureTypeLarge], @"0Large.jpg", nil);

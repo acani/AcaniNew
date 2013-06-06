@@ -1,33 +1,41 @@
-#import <SenTestingKit/SenTestingKit.h>
 #import "AACAppDelegate.h"
-#import "AACUsersViewController.h"
+#import "AACSpecs.h"
+#import "AACWelcomeViewController.h"
 
-@interface AACAppDelegateSpecs : SenTestCase @end
+@interface AACAppDelegateSpecs : AACSpecs @end
 
 @implementation AACAppDelegateSpecs
 
-- (void)specLaunch
+- (void)spec_superclass
 {
-    // Spec `appDelegate`.
-    AACAppDelegate *appDelegate = (AACAppDelegate *)[UIApplication sharedApplication].delegate;
-    STAssertNotNil(appDelegate, nil);
-    STAssertTrue([appDelegate isMemberOfClass:[AACAppDelegate class]], nil);
+    STAssertEquals([AACAppDelegate superclass], [UIResponder class], nil);
+}
 
-    // Spec `_window`.
+- (void)specProtocols
+{
+    STAssertTrue([AACAppDelegate conformsToProtocol:@protocol(UIApplicationDelegate)], nil);
+}
+
+- (void)specApplication_didFinishLaunchingWithOptions_
+{
+    UIApplication *application = [UIApplication sharedApplication];
+    AACAppDelegate *appDelegate = (AACAppDelegate *)application.delegate;
+    STAssertNotNil(appDelegate, nil);
+    STAssertEquals([appDelegate class], [AACAppDelegate class], nil);
+
+    STAssertTrue([appDelegate application:application didFinishLaunchingWithOptions:nil], nil);
+
+    UIColor *tintColor = [UIColor colorWithRed:217/255.0 green:153/255.0 blue:166/255.0 alpha:1];
+    STAssertEqualObjects([[UINavigationBar appearance] tintColor], tintColor, nil);
+
     UIWindow *window = appDelegate.window;
     STAssertNotNil(window, nil);
     STAssertEquals(window.frame, [[UIScreen mainScreen] bounds], nil);
+    AACWelcomeViewController *welcomeViewController = (AACWelcomeViewController *)window.rootViewController;
+    STAssertNotNil(welcomeViewController, nil);
+    STAssertEquals([welcomeViewController class], [AACWelcomeViewController class], nil);
     STAssertEquals(window, [UIApplication sharedApplication].keyWindow, nil);
     STAssertFalse(window.hidden, nil);
-
-    // Spec `navigationController`.
-    UINavigationController *navigationController = (UINavigationController *)window.rootViewController;
-    STAssertNotNil(navigationController, nil);
-    STAssertTrue([navigationController isMemberOfClass:[UINavigationController class]], nil);
-
-    // Spec `UINavigationBar`.
-    UIColor *tintColor = [UIColor colorWithRed:217/255.0 green:153/255.0 blue:166/255.0 alpha:1];
-    STAssertEqualObjects(navigationController.navigationBar.tintColor, tintColor, nil);
 }
 
 @end

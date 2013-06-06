@@ -45,7 +45,6 @@
 {
     [super viewDidLoad];
 
-    // Add `singleTapGestureRecoginzer` for `toggleChromeHiddenAction`.
     UITapGestureRecognizer *singleTapGestureRecoginzer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleChromeHiddenAction:)];
     AACImageScrollView *imageScrollView = (AACImageScrollView *)self.view;
     [imageScrollView addGestureRecognizer:singleTapGestureRecoginzer];

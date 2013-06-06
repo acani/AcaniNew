@@ -20,7 +20,6 @@
 {
     [super viewDidLoad];
 
-    // Add `_bioTextView`.
     // TODO: change UITextView link color. Use a UIWebView instead with dataDetectorTypes = All and custom CSS.
 #define BIO_HEIGHT 49
     _bioTextView = [[UITextView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-BIO_HEIGHT, self.view.frame.size.width, BIO_HEIGHT)];

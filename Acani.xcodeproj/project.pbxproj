@@ -50,6 +50,14 @@
 		D27E400317119B9800E29BAF /* NSInvocation+SetTestMethodPrefixToSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D27E400217119B9800E29BAF /* NSInvocation+SetTestMethodPrefixToSpec.m */; };
 		D27E400517119B9800E29BAF /* AACAppDelegateSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D27E400417119B9800E29BAF /* AACAppDelegateSpecs.m */; };
 		D27E40151711A3F400E29BAF /* AACUsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27E40141711A3F400E29BAF /* AACUsersViewController.m */; };
+		D27F8A10175F4A7800B1ACCE /* AACWelcomeViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D27F8A0F175F4A7800B1ACCE /* AACWelcomeViewControllerSpecs.m */; };
+		D27F8A13175F555C00B1ACCE /* AACLogoLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D27F8A12175F555C00B1ACCE /* AACLogoLabel.m */; };
+		D27F8A15175F563200B1ACCE /* AACLogoLabelSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D27F8A14175F563200B1ACCE /* AACLogoLabelSpecs.m */; };
+		D27F8A17175F5A3500B1ACCE /* AACDefinesSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D27F8A16175F5A3500B1ACCE /* AACDefinesSpecs.m */; };
+		D27F8A1A175FF62900B1ACCE /* AACSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D27F8A19175FF62900B1ACCE /* AACSpecs.m */; };
+		D27F8A1C1760100400B1ACCE /* AACImageScrollViewSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D27F8A1B1760100400B1ACCE /* AACImageScrollViewSpecs.m */; };
+		D27F8A1E176017C500B1ACCE /* AACPageViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D27F8A1D176017C500B1ACCE /* AACPageViewControllerSpecs.m */; };
+		D27F8A201760180900B1ACCE /* AACProfileViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D27F8A1F1760180900B1ACCE /* AACProfileViewControllerSpecs.m */; };
 		D2EE9467174BFD6C0046704E /* 6Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2EE9464174BFD6C0046704E /* 6Large.jpg */; };
 		D2EE9468174BFD6C0046704E /* 6Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2EE9465174BFD6C0046704E /* 6Small.jpg */; };
 		D2EE9469174BFD6C0046704E /* 6Small@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2EE9466174BFD6C0046704E /* 6Small@2x.jpg */; };
@@ -57,6 +65,8 @@
 		D2EE946D174D9D750046704E /* 7Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2EE946B174D9D750046704E /* 7Small.jpg */; };
 		D2EE94701754DCBD0046704E /* AACPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EE946F1754DCBD0046704E /* AACPageViewController.m */; };
 		D2EE94731755315C0046704E /* AACEditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EE94721755315B0046704E /* AACEditProfileViewController.m */; };
+		D2FA67E4175C03220093BC56 /* AACEditProfileViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FA67E3175C03220093BC56 /* AACEditProfileViewControllerSpecs.m */; };
+		D2FA67E7175EC2410093BC56 /* AACApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FA67E6175EC2410093BC56 /* AACApplication.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +99,7 @@
 		D226892E17287E6800984626 /* 0Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0Large.jpg; sourceTree = "<group>"; };
 		D226892F17287E6800984626 /* 0Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0Small.jpg; sourceTree = "<group>"; };
 		D226893017287E6800984626 /* 0Small@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "0Small@2x.jpg"; sourceTree = "<group>"; };
-		D226893617288AA100984626 /* AACUsersViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUsersViewControllerSpecs.m; sourceTree = "<group>"; };
+		D226893617288AA100984626 /* AACUsersViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AACUsersViewControllerSpecs.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		D25F916C17296299003051EF /* AACUserSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUserSpecs.m; sourceTree = "<group>"; };
 		D25F916F1729678A003051EF /* 1Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1Large.jpg; sourceTree = "<group>"; };
 		D25F91701729678A003051EF /* 1Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1Small.jpg; sourceTree = "<group>"; };
@@ -121,10 +131,20 @@
 		D27E3FF917119B9800E29BAF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		D27E400117119B9800E29BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D27E400217119B9800E29BAF /* NSInvocation+SetTestMethodPrefixToSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+SetTestMethodPrefixToSpec.m"; sourceTree = "<group>"; };
-		D27E400417119B9800E29BAF /* AACAppDelegateSpecs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AACAppDelegateSpecs.m; sourceTree = "<group>"; };
+		D27E400417119B9800E29BAF /* AACAppDelegateSpecs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AACAppDelegateSpecs.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		D27E400F17119C9200E29BAF /* AcaniFeatures.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = AcaniFeatures.js; sourceTree = "<group>"; };
 		D27E40131711A3F400E29BAF /* AACUsersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACUsersViewController.h; sourceTree = "<group>"; };
 		D27E40141711A3F400E29BAF /* AACUsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUsersViewController.m; sourceTree = "<group>"; };
+		D27F8A0F175F4A7800B1ACCE /* AACWelcomeViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACWelcomeViewControllerSpecs.m; sourceTree = "<group>"; };
+		D27F8A11175F555C00B1ACCE /* AACLogoLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACLogoLabel.h; sourceTree = "<group>"; };
+		D27F8A12175F555C00B1ACCE /* AACLogoLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACLogoLabel.m; sourceTree = "<group>"; };
+		D27F8A14175F563200B1ACCE /* AACLogoLabelSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AACLogoLabelSpecs.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		D27F8A16175F5A3500B1ACCE /* AACDefinesSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACDefinesSpecs.m; sourceTree = "<group>"; };
+		D27F8A18175FF62900B1ACCE /* AACSpecs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACSpecs.h; sourceTree = "<group>"; };
+		D27F8A19175FF62900B1ACCE /* AACSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACSpecs.m; sourceTree = "<group>"; };
+		D27F8A1B1760100400B1ACCE /* AACImageScrollViewSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACImageScrollViewSpecs.m; sourceTree = "<group>"; };
+		D27F8A1D176017C500B1ACCE /* AACPageViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACPageViewControllerSpecs.m; sourceTree = "<group>"; };
+		D27F8A1F1760180900B1ACCE /* AACProfileViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACProfileViewControllerSpecs.m; sourceTree = "<group>"; };
 		D29CA2AF1735DAD600B5052B /* AACDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AACDefines.h; sourceTree = "<group>"; };
 		D2EE9464174BFD6C0046704E /* 6Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6Large.jpg; sourceTree = "<group>"; };
 		D2EE9465174BFD6C0046704E /* 6Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6Small.jpg; sourceTree = "<group>"; };
@@ -135,6 +155,9 @@
 		D2EE946F1754DCBD0046704E /* AACPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACPageViewController.m; sourceTree = "<group>"; };
 		D2EE94711755315B0046704E /* AACEditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACEditProfileViewController.h; sourceTree = "<group>"; };
 		D2EE94721755315B0046704E /* AACEditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACEditProfileViewController.m; sourceTree = "<group>"; };
+		D2FA67E3175C03220093BC56 /* AACEditProfileViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AACEditProfileViewControllerSpecs.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		D2FA67E5175EC2410093BC56 /* AACApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACApplication.h; sourceTree = "<group>"; };
+		D2FA67E6175EC2410093BC56 /* AACApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACApplication.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +190,8 @@
 			children = (
 				D264A2E31742B9D7005D6298 /* AACImageScrollView.h */,
 				D264A2E41742B9D7005D6298 /* AACImageScrollView.m */,
+				D27F8A11175F555C00B1ACCE /* AACLogoLabel.h */,
+				D27F8A12175F555C00B1ACCE /* AACLogoLabel.m */,
 				D226891B172835A100984626 /* AACUserCell.h */,
 				D226891C172835A100984626 /* AACUserCell.m */,
 			);
@@ -215,7 +240,11 @@
 		D25F917817297562003051EF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D2FA67E3175C03220093BC56 /* AACEditProfileViewControllerSpecs.m */,
+				D27F8A1D176017C500B1ACCE /* AACPageViewControllerSpecs.m */,
+				D27F8A1F1760180900B1ACCE /* AACProfileViewControllerSpecs.m */,
 				D226893617288AA100984626 /* AACUsersViewControllerSpecs.m */,
+				D27F8A0F175F4A7800B1ACCE /* AACWelcomeViewControllerSpecs.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -231,6 +260,8 @@
 		D25F917A1729756A003051EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D27F8A1B1760100400B1ACCE /* AACImageScrollViewSpecs.m */,
+				D27F8A14175F563200B1ACCE /* AACLogoLabelSpecs.m */,
 				D25F917617297068003051EF /* AACUserCellSpecs.m */,
 			);
 			name = Views;
@@ -273,6 +304,8 @@
 			isa = PBXGroup;
 			children = (
 				D29CA2AF1735DAD600B5052B /* AACDefines.h */,
+				D2FA67E5175EC2410093BC56 /* AACApplication.h */,
+				D2FA67E6175EC2410093BC56 /* AACApplication.m */,
 				D27E3FE317119B9700E29BAF /* AACAppDelegate.h */,
 				D27E3FE417119B9700E29BAF /* AACAppDelegate.m */,
 				D27E40161711A71A00E29BAF /* Controllers */,
@@ -326,6 +359,9 @@
 		D27E3FFF17119B9800E29BAF /* AcaniSpecs */ = {
 			isa = PBXGroup;
 			children = (
+				D27F8A16175F5A3500B1ACCE /* AACDefinesSpecs.m */,
+				D27F8A18175FF62900B1ACCE /* AACSpecs.h */,
+				D27F8A19175FF62900B1ACCE /* AACSpecs.m */,
 				D27E400417119B9800E29BAF /* AACAppDelegateSpecs.m */,
 				D25F917817297562003051EF /* Controllers */,
 				D25F917917297567003051EF /* Models */,
@@ -526,6 +562,8 @@
 				D264A2E51742B9D7005D6298 /* AACImageScrollView.m in Sources */,
 				D2EE94701754DCBD0046704E /* AACPageViewController.m in Sources */,
 				D2EE94731755315C0046704E /* AACEditProfileViewController.m in Sources */,
+				D2FA67E7175EC2410093BC56 /* AACApplication.m in Sources */,
+				D27F8A13175F555C00B1ACCE /* AACLogoLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +576,14 @@
 				D226893717288AA100984626 /* AACUsersViewControllerSpecs.m in Sources */,
 				D25F916D17296299003051EF /* AACUserSpecs.m in Sources */,
 				D25F917717297068003051EF /* AACUserCellSpecs.m in Sources */,
+				D2FA67E4175C03220093BC56 /* AACEditProfileViewControllerSpecs.m in Sources */,
+				D27F8A10175F4A7800B1ACCE /* AACWelcomeViewControllerSpecs.m in Sources */,
+				D27F8A15175F563200B1ACCE /* AACLogoLabelSpecs.m in Sources */,
+				D27F8A17175F5A3500B1ACCE /* AACDefinesSpecs.m in Sources */,
+				D27F8A1A175FF62900B1ACCE /* AACSpecs.m in Sources */,
+				D27F8A1C1760100400B1ACCE /* AACImageScrollViewSpecs.m in Sources */,
+				D27F8A1E176017C500B1ACCE /* AACPageViewControllerSpecs.m in Sources */,
+				D27F8A201760180900B1ACCE /* AACProfileViewControllerSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
