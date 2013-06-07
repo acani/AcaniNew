@@ -64,8 +64,6 @@
     STAssertEquals(layout.minimumLineSpacing, (CGFloat)4, nil);
     STAssertEquals(layout.sectionInset, UIEdgeInsetsMake(4, 4, 4, 4), nil);
 
-    STAssertEquals([UIApplication sharedApplication].statusBarStyle, UIStatusBarStyleBlackTranslucent, nil);
-
     STAssertEquals(_navigationController.navigationBar.barStyle, UIBarStyleBlack, nil);
     STAssertTrue(_navigationController.navigationBar.translucent, nil);
 

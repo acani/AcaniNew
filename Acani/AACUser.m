@@ -1,5 +1,7 @@
 #import "AACUser.h"
 
+AACUser *meUser;
+
 @implementation AACUser
 
 - (NSString *)name

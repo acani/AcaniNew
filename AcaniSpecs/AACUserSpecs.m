@@ -35,6 +35,13 @@
     STAssertEqualObjects(_user.bio, @"Hello! My name is Lauren.", nil);
 }
 
+- (void)specFacebookID
+{
+    STAssertNil(_user.facebookID, nil);
+    _user.facebookID = @"514417";
+    STAssertEqualObjects(_user.facebookID, @"514417", nil);
+}
+
 - (void)specFirstName
 {
     STAssertNil(_user.firstName, nil);

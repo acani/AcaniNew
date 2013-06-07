@@ -19,6 +19,8 @@
 - (void)specApplication_didFinishLaunchingWithOptions_
 {
     UIApplication *application = [UIApplication sharedApplication];
+    STAssertEquals(application.statusBarStyle, UIStatusBarStyleBlackTranslucent, nil); // Info.plist
+
     AACAppDelegate *appDelegate = (AACAppDelegate *)application.delegate;
     STAssertNotNil(appDelegate, nil);
     STAssertEquals([appDelegate class], [AACAppDelegate class], nil);

@@ -43,7 +43,7 @@
     STAssertEquals(logInButton.buttonType, UIButtonTypeRoundedRect, nil);
     STAssertEquals(logInButton.frame, CGRectMake(70, 300, 180, 44), nil);
     STAssertEqualObjects([logInButton titleForState:UIControlStateNormal], NSLocalizedString(@"Log In with Facebook", nil), nil);
-    [self control:logInButton specTarget:_welcomeViewController action:@selector(logInAction) forControlEvents:UIControlEventTouchUpInside];
+    [self control:logInButton specTarget:[UIApplication sharedApplication].delegate action:@selector(logInAction) forControlEvents:UIControlEventTouchUpInside];
 
 }
 

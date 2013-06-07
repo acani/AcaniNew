@@ -34,6 +34,11 @@ static NSString *CellIdentifier = @"ACUserCell";
         self.title = NSLocalizedString(@"Users", nil); // for back button of pushed page
         self.wantsFullScreenLayout = YES;
 
+        // Temporary
+        // TODO: Add AACSettingsViewController for "Log Out" & "Delete Account."
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Log Out", nil) style:UIBarButtonItemStyleBordered target:[UIApplication sharedApplication].delegate action:@selector(logOutAction)];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Edit Profile", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(editProfileAction)];
+
         AACLogoLabel *logoLabel = [[AACLogoLabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
         logoLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         logoLabel.font = [UIFont fontWithName:@"AvenirNext-Heavy" size:TITLE_FONT_SIZE_PORTRAIT];
@@ -49,8 +54,6 @@ static NSString *CellIdentifier = @"ACUserCell";
 {
     [super viewDidLoad];
 
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent animated:NO];
-
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.navigationBar.translucent = YES;
 
@@ -59,51 +62,63 @@ static NSString *CellIdentifier = @"ACUserCell";
 
     [self.collectionView registerClass:[AACUserCell class] forCellWithReuseIdentifier:CellIdentifier];
 
-    AACUser *user0 = [[AACUser alloc] init];
-    user0.bio = @"Hello! My name is Lauren. I am *Amazing*, gorgeous, intelligent, genius, loving, courageous, fun, funny, healthy, wealthy, wise, playful, happy, flexible, open-minded, confident, and sexy.";
-    user0.firstName = @"Lauren";
-    user0.lastName = @"Di Pasquale";
-    user0.uniqueIdentifier = @"0";
+    meUser = [[AACUser alloc] init];
+    meUser.bio = @"Hello! My name is Lauren. I am *Amazing*, gorgeous, intelligent, genius, loving, courageous, fun, funny, healthy, wealthy, wise, playful, happy, flexible, open-minded, confident, and sexy.";
+    meUser.facebookID = @"4";
+    meUser.firstName = @"Lauren";
+    meUser.lastName = @"Di Pasquale";
+    meUser.uniqueIdentifier = @"0";
 
     AACUser *user1 = [[AACUser alloc] init];
     user1.bio = @"Hello! My name is Matt. I am *Amazing*, gorgeous, intelligent, genius, loving, courageous, fun, funny, healthy, wealthy, wise, playful, happy, flexible, open-minded, confident, and sexy. Check out my website: mattdipasquale.com";
+    user1.facebookID = @"514417";
     user1.firstName = @"Matt";
+    user1.lastName = @"Di Pasquale";
     user1.uniqueIdentifier = @"1";
 
     AACUser *user2 = [[AACUser alloc] init];
     user2.bio = @"Hello! My name is Earth. I am big & round, magnificent!";
+    user2.facebookID = @"5";
     user2.firstName = @"Earth";
+    user2.lastName = @"Living";
     user2.uniqueIdentifier = @"2";
 
     AACUser *user3 = [[AACUser alloc] init];
     user3.bio = @"Hello! My name is Nature. I am beautiful.";
+    user3.facebookID = @"6";
     user3.firstName = @"Nature";
+    user3.lastName = @"Love";
     user3.uniqueIdentifier = @"3";
 
     AACUser *user4 = [[AACUser alloc] init];
     user4.bio = @"Hello! My name is Beach. I am amazing.";
+    user4.facebookID = @"7";
     user4.firstName = @"Beach";
+    user4.lastName = @"Water";
     user4.uniqueIdentifier = @"4";
 
     AACUser *user5 = [[AACUser alloc] init];
     user5.bio = @"Hello! My name is Courage. I am wise.";
+    user5.facebookID = @"10";
     user5.firstName = @"Courage";
+    user5.lastName = @"Love";
     user5.uniqueIdentifier = @"5";
 
     AACUser *user6 = [[AACUser alloc] init];
     user6.bio = @"Hello! My name is Leadership. I am creative.";
+    user6.facebookID = @"11";
     user6.firstName = @"Leadership";
+    user6.lastName = @"Power";
     user6.uniqueIdentifier = @"6";
 
     AACUser *user7 = [[AACUser alloc] init];
     user7.bio = @"Hello! My name is GitHub. I am collaborative.";
+    user7.facebookID = @"13";
     user7.firstName = @"GitHub";
+    user7.lastName = @"Inc.";
     user7.uniqueIdentifier = @"7";
 
-    _users = @[user0, user1, user2, user3, user4, user5, user6, user7];
-
-    // Temporary
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Edit Profile", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(editProfileAction)];
+    _users = @[meUser, user1, user2, user3, user4, user5, user6, user7];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -195,8 +210,10 @@ static NSString *CellIdentifier = @"ACUserCell";
 {
     if (completed) {
         AACProfileViewController *profileViewController = (AACProfileViewController *)[pageViewController.viewControllers lastObject];
+        AACUser *user = profileViewController.user;
         pageViewController.title = profileViewController.title;
-        pageViewController.bioTextView.text = profileViewController.user.bio;
+        pageViewController.bioTextView.text = user.bio;
+        pageViewController.navigationItem.rightBarButtonItem = (user == meUser ? self.editButtonItem : nil);
     }
 }
 

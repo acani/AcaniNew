@@ -78,7 +78,7 @@
 
 #pragma mark - Actions
 
-// Fade out status & navigation bars and `_bioTextView`.
+// Fade out status & navigation bars and `bioTextView`.
 - (void)toggleChromeHiddenAction:(UIGestureRecognizer *)gestureRecognizer
 {
     if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
@@ -89,7 +89,7 @@
         [UIView animateWithDuration:1/3.0 animations:^{
             [application setStatusBarHidden:hidden withAnimation:UIStatusBarAnimationNone];
             self.navigationController.navigationBar.alpha = alpha;
-            ((AACPageViewController *)self.parentViewController).bioTextView.alpha = alpha;
+            ((AACPageViewController *)self.parentViewController).footer.alpha = alpha;
         }];
     }
 }

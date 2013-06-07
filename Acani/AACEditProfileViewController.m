@@ -19,7 +19,9 @@
 #pragma mark - Properties
 
 - (UITextView *)bioTextView {
-    return (UITextView *)[self.tableView viewWithTag:BIO_TAG];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    return (UITextView *)[cell.contentView viewWithTag:BIO_TAG];
 }
 
 #pragma mark - UIView
@@ -59,6 +61,8 @@
     [tableHeaderView addSubview:nameLabel];
 
     self.tableView.tableHeaderView = tableHeaderView;
+
+    [[self bioTextView] becomeFirstResponder];
 }
 
 #pragma mark - Actions
