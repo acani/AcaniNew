@@ -37,7 +37,6 @@
 #define IN   30
 #define GAP (OUT-IN)/2 // 14/2 = 7
 
-    // TODO: Hide entire footer on single tap of image.
     CGRect frame = CGRectMake(0, view.frame.size.height-OUT, view.frame.size.width, OUT);
     _footer = [[UIView alloc] initWithFrame:frame];
     _footer.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;

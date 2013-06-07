@@ -35,7 +35,7 @@ static NSString *CellIdentifier = @"ACUserCell";
         self.wantsFullScreenLayout = YES;
 
         // Temporary
-        // TODO: Add AACSettingsViewController for "Log Out" & "Delete Account."
+        // TODO: Add "Delete Account" option while editing profile.
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Log Out", nil) style:UIBarButtonItemStyleBordered target:[UIApplication sharedApplication].delegate action:@selector(logOutAction)];
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Edit Profile", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(editProfileAction)];
 
