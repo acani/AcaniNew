@@ -6,6 +6,8 @@
 
 @implementation AACAppDelegateSpecs
 
+#pragma mark - NSObject
+
 - (void)spec_superclass
 {
     STAssertEquals([AACAppDelegate superclass], [UIResponder class], nil);
@@ -15,6 +17,8 @@
 {
     STAssertTrue([AACAppDelegate conformsToProtocol:@protocol(UIApplicationDelegate)], nil);
 }
+
+#pragma mark - UIApplicationDelegate
 
 - (void)specApplication_didFinishLaunchingWithOptions_
 {

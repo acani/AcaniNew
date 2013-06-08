@@ -4,6 +4,8 @@
 #import "AACUsersViewController.h"
 #import "AACWelcomeViewController.h"
 
+@interface AACAppDelegate () <UIActionSheetDelegate> @end
+
 @implementation AACAppDelegate
 
 #pragma mark - UIApplicationDelegate
@@ -37,8 +39,8 @@
 
 - (void)logOutAction
 {
-    AACWelcomeViewController *welcomeViewController = [[AACWelcomeViewController alloc] initWithNibName:nil bundle:nil];
-    [self transitionViewController:welcomeViewController options:UIViewAnimationOptionTransitionFlipFromLeft];
+    UIActionSheet *actionSheetLogout = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", nil) destructiveButtonTitle:NSLocalizedString(@"Log Out", nil) otherButtonTitles:nil];
+    [actionSheetLogout showInView:_window];
 }
 
 #pragma mark - Helpers
@@ -53,6 +55,15 @@
     [UIView transitionWithView:_window duration:0.6 options:UIViewAnimationOptionAllowAnimatedContent|options animations:^{
         _window.rootViewController = viewController;
     } completion:nil];
+}
+
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex != actionSheet.cancelButtonIndex) { // "Log Out" tapped
+        AACWelcomeViewController *welcomeViewController = [[AACWelcomeViewController alloc] initWithNibName:nil bundle:nil];
+        [self transitionViewController:welcomeViewController options:UIViewAnimationOptionTransitionFlipFromLeft];
+    }
 }
 
 @end
