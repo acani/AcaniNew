@@ -34,6 +34,7 @@
 		D264A2DF173C76A6005D6298 /* AACWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D264A2DE173C76A6005D6298 /* AACWelcomeViewController.m */; };
 		D264A2E21742553C005D6298 /* AACProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D264A2E11742553C005D6298 /* AACProfileViewController.m */; };
 		D264A2E51742B9D7005D6298 /* AACImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D264A2E41742B9D7005D6298 /* AACImageScrollView.m */; };
+		D27CF3C31765DD4A000D45ED /* LogInButtonBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D27CF3C21765DD4A000D45ED /* LogInButtonBackground.png */; };
 		D27E3FD717119B9700E29BAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27E3FD617119B9700E29BAF /* CoreGraphics.framework */; };
 		D27E3FD917119B9700E29BAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27E3FD817119B9700E29BAF /* Foundation.framework */; };
 		D27E3FDB17119B9700E29BAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27E3FDA17119B9700E29BAF /* UIKit.framework */; };
@@ -114,6 +115,7 @@
 		D264A2E11742553C005D6298 /* AACProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACProfileViewController.m; sourceTree = "<group>"; };
 		D264A2E31742B9D7005D6298 /* AACImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACImageScrollView.h; sourceTree = "<group>"; };
 		D264A2E41742B9D7005D6298 /* AACImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACImageScrollView.m; sourceTree = "<group>"; };
+		D27CF3C21765DD4A000D45ED /* LogInButtonBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogInButtonBackground.png; sourceTree = "<group>"; };
 		D27E3FD317119B9700E29BAF /* Acani.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Acani.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27E3FD617119B9700E29BAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D27E3FD817119B9700E29BAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -415,6 +417,7 @@
 			children = (
 				D2E216E81760DB7100AC41DE /* FacebookIcon.png */,
 				D2E216E91760DB7100AC41DE /* FacebookIcon@2x.png */,
+				D27CF3C21765DD4A000D45ED /* LogInButtonBackground.png */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				D2EE946D174D9D750046704E /* 7Small.jpg in Resources */,
 				D2E216EA1760DB7100AC41DE /* FacebookIcon.png in Resources */,
 				D2E216EB1760DB7100AC41DE /* FacebookIcon@2x.png in Resources */,
+				D27CF3C31765DD4A000D45ED /* LogInButtonBackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
