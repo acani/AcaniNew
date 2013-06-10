@@ -559,7 +559,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+			shellScript = "# Run specs.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n\n# TODO: Get this working. Ask on Stack Overflow. Ask Sam.\n# Run features.\n# instruments -t \"${DEVELOPER_DIR}/../Applications/Instruments.app/Contents/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate\" \"${TEST_HOST}\" -e UIASCRIPT \"${SRCROOT}/AcaniFeatures/AcaniFeatures.js\" -e UIARESULTSPATH \"/Users/mattdipasquale/Desktop/UI Automation Output\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
