@@ -31,16 +31,9 @@ static NSString *CellIdentifier = @"ACUserCell";
     layout.sectionInset = UIEdgeInsetsMake(4, 4, 4, 4);
     self = [super initWithCollectionViewLayout:layout];
     if (self) {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"SettingsCog"] style:UIBarButtonItemStyleBordered target:self action:@selector(settingsAction)];
         self.title = NSLocalizedString(@"Users", nil); // for back button of pushed page
         self.wantsFullScreenLayout = YES;
-
-        // Temporary
-        // TODO: Add "Delete Account" option while editing profile.
-
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"SettingsCog"] style:UIBarButtonItemStyleBordered target:self action:@selector(settingsAction)];
-
-//        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Log Out", nil) style:UIBarButtonItemStyleBordered target:[UIApplication sharedApplication].delegate action:@selector(logOutAction)];
-//        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Edit Profile", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(editProfileAction)];
 
         AACLogoLabel *logoLabel = [[AACLogoLabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
         logoLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;

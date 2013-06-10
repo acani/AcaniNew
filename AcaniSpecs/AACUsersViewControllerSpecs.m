@@ -1,9 +1,13 @@
 #import "AACApplication.h"
 #import "AACDefines.h"
 #import "AACLogoLabel.h"
+#import "AACPageViewController.h"
 #import "AACSpecs.h"
 #import "AACUsersViewController.h"
 #import "AACUserCell.h"
+
+#define FIRST_NAMES @[@"Lauren", @"Matt", @"Earth", @"Nature", @"Beach", @"Courage", @"Leadership", @"GitHub"]
+#define NAMES @[@"Lauren Di Pasquale", @"Matt Di Pasquale", @"Earth Living", @"Nature Love", @"Beach Water", @"Courage Love", @"Leadership Power", @"GitHub Inc."]
 
 @interface AACUsersViewControllerSpecs : AACSpecs @end
 
@@ -40,6 +44,14 @@
 
     STAssertEqualObjects(_usersViewController.title, NSLocalizedString(@"Users", nil), nil);
     STAssertTrue(_usersViewController.wantsFullScreenLayout, nil);
+
+    UIBarButtonItem *settingsBarButtonItem = _usersViewController.navigationItem.rightBarButtonItem;
+    STAssertNotNil(settingsBarButtonItem, nil);
+    STAssertEquals(settingsBarButtonItem.action, @selector(settingsAction), nil);
+    STAssertEqualObjects(settingsBarButtonItem.image, [UIImage imageNamed:@"SettingsCog"], nil);
+    STAssertEquals(settingsBarButtonItem.style, UIBarButtonItemStyleBordered, nil);
+    STAssertEqualObjects(settingsBarButtonItem.target, _usersViewController, nil);
+    STAssertTrue([_usersViewController respondsToSelector:@selector(settingsAction)], nil);
 
     UILabel *logoLabel = (UILabel *)_usersViewController.navigationItem.titleView;
     STAssertNotNil(logoLabel, nil);
@@ -102,31 +114,43 @@
 
 #pragma mark - UICollectionViewDataSource
 
-- (void)specCollectionViewDataSource
+- (void)specCollectionView_numberOfItemsInSection_
 {
     UICollectionView *collectionView = _usersViewController.collectionView;
-
     STAssertEquals([collectionView numberOfSections], 1, nil);
     STAssertEquals([collectionView numberOfItemsInSection:0], 8, nil);
+}
 
-    // TODO: Fix this. Outdated. There are no visible cells.
+- (void)specCollectionView_cellForItemAtIndexPath_
+{
+    UICollectionView *collectionView = _usersViewController.collectionView;
     NSInteger item = 0;
-    for (AACUserCell *cell in [collectionView visibleCells]) {
+    for (NSString *firstName in FIRST_NAMES) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:item inSection:0];
+        AACUserCell *cell = (AACUserCell *)[_usersViewController collectionView:collectionView cellForItemAtIndexPath:indexPath];
         STAssertEquals([cell class], [AACUserCell class], nil);
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%iSmall.jpg", item]];
+        STAssertEqualObjects(((UIImageView *)cell.backgroundView).image, image, nil);
+        STAssertEqualObjects(cell.nameLabel.text, firstName, nil);
+        item++;
+    }
+}
 
-        NSString *name;
-        NSString *pictureName;
-        if (item % 2) {
-            name = @"Matt";
-            pictureName = @"1Small.jpg";
-        } else {
-            name = @"Lauren";
-            pictureName = @"0Small.jpg";
-        }
-        UIColor *color = [UIColor colorWithPatternImage:[UIImage imageNamed:pictureName]];
-        STAssertEqualObjects(cell.backgroundColor, color, nil);
-        STAssertEqualObjects(cell.nameLabel.text, name, nil);
+#pragma mark - UICollectionViewDelegate
 
+- (void)specCollectionView_didSelectItemAtIndexPath_
+{
+    UICollectionView *collectionView = _usersViewController.collectionView;
+    NSInteger item = 0;
+    for (NSString *name in NAMES) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:item inSection:0];
+        [_usersViewController collectionView:collectionView didSelectItemAtIndexPath:indexPath];
+        AACPageViewController *pageViewController = (AACPageViewController *)_navigationController.topViewController;
+        STAssertEquals([pageViewController class], [AACPageViewController class], nil);
+        STAssertEquals(pageViewController.dataSource, _usersViewController, nil);
+        STAssertEquals(pageViewController.delegate, _usersViewController, nil);
+        STAssertEqualObjects(pageViewController.title, name, nil);
+        [_navigationController popViewControllerAnimated:NO];
         item++;
     }
 }

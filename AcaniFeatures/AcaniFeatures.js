@@ -14,33 +14,79 @@ mainWindow.buttons()["Log In with Facebook"].tap();
 // View Profile
 mainWindow.collectionViews()[0].cells()["0Small.jpg"].tap();
 
+var scrollView = mainWindow.scrollViews()[0];
+
 // - hide chrome
-mainWindow.scrollViews()[0].tap();
+scrollView.tap();
 target.delay(0.5);
 
 // - zoom in
-mainWindow.scrollViews()[0].doubleTap();
+scrollView.doubleTap();
 target.delay(0.5);
 
 // - zoom out
-mainWindow.scrollViews()[0].doubleTap();
+scrollView.doubleTap();
 target.delay(0.5);
 
+// - touch & hold
+scrollView.touchAndHold();
+frontMostApp.actionSheet().cancelButton().tap();
+
+scrollView.touchAndHold();
+frontMostApp.actionSheet().buttons()["Save Picture"].tap();
+
+scrollView.touchAndHold();
+frontMostApp.actionSheet().buttons()["Copy"].tap();
+
 // - show chrome
-mainWindow.scrollViews()[0].tap();
+scrollView.tap();
 
 // - back
 frontMostApp.navigationBar().leftButton().tap();
 
-// Log Out
+// Settings
 
 // - cancel
-target.frontMostApp().navigationBar().leftButton().tap();
-target.frontMostApp().actionSheet().cancelButton().tap();
+frontMostApp.navigationBar().rightButton().tap();
+frontMostApp.actionSheet().cancelButton().tap();
 
-// - log out
+// - settings
+frontMostApp.navigationBar().rightButton().tap();
+frontMostApp.actionSheet().buttons()["Settings"].tap();
+
+// - - done
+frontMostApp.navigationBar().leftButton().tap();
+
+// - settings
+frontMostApp.navigationBar().rightButton().tap();
+frontMostApp.actionSheet().buttons()["Settings"].tap();
+
+var cells = target.frontMostApp().mainWindow().tableViews()[0].cells();
+
+cells["Privacy Policy"].tap();
+frontMostApp.navigationBar().leftButton().tap();
+
+cells["Send Feedback"].tap();
+target.logElementTree(); // makes next line work #hack
 target.frontMostApp().navigationBar().leftButton().tap();
-target.frontMostApp().actionSheet().buttons()["Log Out"].tap();
+target.frontMostApp().actionSheet().buttons()["Delete Draft"].tap();
+
+// - log out - cancel
+cells["Log Out"].tap();
+frontMostApp.actionSheet().cancelButton().tap();
+
+// - log out - log out
+cells["Log Out"].tap();
+frontMostApp.actionSheet().buttons()["Log Out"].tap();
+
+// - delete account
+mainWindow.buttons()["Log In with Facebook"].tap();
+frontMostApp.navigationBar().rightButton().tap();
+frontMostApp.actionSheet().buttons()["Settings"].tap();
+mainWindow.tableViews()[0].buttons()["Delete Account"].tap();
+target.frontMostApp().actionSheet().cancelButton().tap();
+mainWindow.tableViews()[0].buttons()["Delete Account"].tap();
+target.frontMostApp().actionSheet().buttons()["Delete Account"].tap();
 
 
 // Old Code
