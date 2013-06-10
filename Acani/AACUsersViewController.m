@@ -4,6 +4,7 @@
 #import "AACLogoLabel.h"
 #import "AACPageViewController.h"
 #import "AACProfileViewController.h"
+#import "AACSettingsViewController.h"
 #import "AACUser.h"
 #import "AACUserCell.h"
 #import "AACUsersViewController.h"
@@ -13,8 +14,7 @@
 
 static NSString *CellIdentifier = @"ACUserCell";
 
-@interface AACUsersViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
-@end
+@interface AACUsersViewController () <UIActionSheetDelegate, UIPageViewControllerDataSource, UIPageViewControllerDelegate> @end
 
 @implementation AACUsersViewController {
     NSArray *_users;
@@ -36,8 +36,11 @@ static NSString *CellIdentifier = @"ACUserCell";
 
         // Temporary
         // TODO: Add "Delete Account" option while editing profile.
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Log Out", nil) style:UIBarButtonItemStyleBordered target:[UIApplication sharedApplication].delegate action:@selector(logOutAction)];
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Edit Profile", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(editProfileAction)];
+
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"SettingsCog"] style:UIBarButtonItemStyleBordered target:self action:@selector(settingsAction)];
+
+//        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Log Out", nil) style:UIBarButtonItemStyleBordered target:[UIApplication sharedApplication].delegate action:@selector(logOutAction)];
+//        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Edit Profile", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(editProfileAction)];
 
         AACLogoLabel *logoLabel = [[AACLogoLabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
         logoLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -58,7 +61,7 @@ static NSString *CellIdentifier = @"ACUserCell";
     self.navigationController.navigationBar.translucent = YES;
 
     self.collectionView.alwaysBounceVertical = YES;
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.backgroundColor = AAC_LIGHT_GRAY_COLOR;
 
     [self.collectionView registerClass:[AACUserCell class] forCellWithReuseIdentifier:CellIdentifier];
 
@@ -156,10 +159,10 @@ static NSString *CellIdentifier = @"ACUserCell";
 
 #pragma mark - Actions
 
-- (void)editProfileAction
+- (void)settingsAction
 {
-    AACEditProfileViewController *editProfileViewController = [[AACEditProfileViewController alloc] initWithUser:_users[0]];
-    [self.navigationController pushViewController:editProfileViewController animated:YES];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", nil) destructiveButtonTitle:nil otherButtonTitles:NSLocalizedString(@"Edit Profile", nil), NSLocalizedString(@"Settings", nil), nil];
+    [actionSheet showInView:self.view.window];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -214,6 +217,29 @@ static NSString *CellIdentifier = @"ACUserCell";
         pageViewController.title = profileViewController.title;
         pageViewController.bioTextView.text = user.bio;
         pageViewController.navigationItem.rightBarButtonItem = (user == meUser ? self.editButtonItem : nil);
+    }
+}
+
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    // TODO: Both cases below slightly alter the image.
+    // To fix, use the actual data downloaded and stored as a file.
+    UIViewController *viewController;
+    AACSettingsViewController *settingsViewController;
+    switch (buttonIndex) {
+        case 0: // Edit Profile
+            viewController = [[AACEditProfileViewController alloc] initWithUser:_users[0]];
+            [self.navigationController pushViewController:viewController animated:YES];
+            break;
+        case 1: // Settings
+            settingsViewController = [[AACSettingsViewController alloc] initWithStyle:UITableViewStyleGrouped];
+            settingsViewController.title = NSLocalizedString(@"Settings", nil);
+            settingsViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(aac_dismissViewController)];
+            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
+            [self presentViewController:navigationController animated:YES completion:nil];
+            break;
     }
 }
 

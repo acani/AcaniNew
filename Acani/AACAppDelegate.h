@@ -4,4 +4,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+- (void)logOutAction;
+- (void)deleteAccountAction;
+
 @end

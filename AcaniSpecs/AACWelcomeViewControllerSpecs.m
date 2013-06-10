@@ -46,7 +46,7 @@
     STAssertEquals(logInButton.layer.cornerRadius, (CGFloat)7, nil);
     STAssertTrue(logInButton.layer.masksToBounds, nil);
     STAssertEqualObjects(logInButton.titleLabel.font, [UIFont boldSystemFontOfSize:16], nil);
-    STAssertEqualObjects([logInButton backgroundImageForState:UIControlStateNormal], [UIImage imageNamed:@"LogInButtonBackground"], nil);
+    STAssertEqualObjects([logInButton backgroundImageForState:UIControlStateNormal], [UIImage imageNamed:@"FacebookBackground"], nil);
     STAssertEqualObjects([logInButton titleForState:UIControlStateNormal], NSLocalizedString(@"Log In with Facebook", nil), nil);
     [self control:logInButton specTarget:[UIApplication sharedApplication].delegate action:@selector(logInAction) forControlEvents:UIControlEventTouchUpInside];
 

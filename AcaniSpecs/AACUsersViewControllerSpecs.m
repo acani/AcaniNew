@@ -1,4 +1,5 @@
 #import "AACApplication.h"
+#import "AACDefines.h"
 #import "AACLogoLabel.h"
 #import "AACSpecs.h"
 #import "AACUsersViewController.h"
@@ -68,7 +69,7 @@
     STAssertTrue(_navigationController.navigationBar.translucent, nil);
 
     STAssertTrue(collectionView.alwaysBounceVertical, nil);
-    STAssertEqualObjects(collectionView.backgroundColor, [UIColor whiteColor], nil);
+    STAssertEqualObjects(collectionView.backgroundColor, AAC_LIGHT_GRAY_COLOR, nil);
 }
 
 - (void)specViewWillAppear_

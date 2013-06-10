@@ -23,7 +23,7 @@
     logInButton.layer.cornerRadius = 7;
     logInButton.layer.masksToBounds = YES;
     logInButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
-    [logInButton setBackgroundImage:[UIImage imageNamed:@"LogInButtonBackground"] forState:UIControlStateNormal];
+    [logInButton setBackgroundImage:[UIImage imageNamed:@"FacebookBackground"] forState:UIControlStateNormal];
     [logInButton setTitle:NSLocalizedString(@"Log In with Facebook", nil) forState:UIControlStateNormal];
     [logInButton addTarget:[UIApplication sharedApplication].delegate action:@selector(logInAction) forControlEvents:UIControlEventTouchUpInside];
     [view addSubview:logInButton];

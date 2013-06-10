@@ -1,3 +1,4 @@
+#import "AACDefines.h"
 #import "AACEditProfileViewController.h"
 #import "AACUser.h"
 
@@ -30,6 +31,8 @@
 {
     [super viewDidLoad];
 
+    self.view.backgroundColor = AAC_LIGHT_GRAY_COLOR;
+    self.tableView.backgroundView = nil;
     self.tableView.rowHeight = 72;
 
     UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 60+16*2-10)];

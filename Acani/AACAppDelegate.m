@@ -4,7 +4,8 @@
 #import "AACUsersViewController.h"
 #import "AACWelcomeViewController.h"
 
-@interface AACAppDelegate () <UIActionSheetDelegate> @end
+//// Testing
+//#import "AACSettingsViewController.h"
 
 @implementation AACAppDelegate
 
@@ -14,15 +15,16 @@
 {
     [[UINavigationBar appearance] setTintColor:AAC_ROSE_QUARTZ_COLOR];
 
+
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    _window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[AACUsersViewController alloc] init]];
     _window.rootViewController = [[AACWelcomeViewController alloc] initWithNibName:nil bundle:nil];
+//    _window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[AACSettingsViewController alloc] initWithStyle:UITableViewStyleGrouped]];
     [_window makeKeyAndVisible];
 
     return YES;
 }
 
-// Keep navigation bar below status bar. #hack
+// Keep navigation bar below status bar. #hacw[k
 // http://stackoverflow.com/a/6190485/242933
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
@@ -54,8 +56,15 @@
 
 - (void)logOutAction
 {
-    UIActionSheet *actionSheetLogout = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", nil) destructiveButtonTitle:NSLocalizedString(@"Log Out", nil) otherButtonTitles:nil];
-    [actionSheetLogout showInView:_window];
+    AACWelcomeViewController *welcomeViewController = [[AACWelcomeViewController alloc] initWithNibName:nil bundle:nil];
+    [self transitionViewController:welcomeViewController options:UIViewAnimationOptionTransitionFlipFromLeft];
+}
+
+- (void)deleteAccountAction
+{
+    // TODO: Delete account.
+    NSLog(@"deleteAccountAction");
+    [self logOutAction];
 }
 
 #pragma mark - Helpers
@@ -75,15 +84,6 @@
     [UIView transitionWithView:_window duration:0.6 options:UIViewAnimationOptionAllowAnimatedContent|options animations:^{
         _window.rootViewController = viewController;
     } completion:nil];
-}
-
-#pragma mark - UIActionSheetDelegate
-
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex != actionSheet.cancelButtonIndex) { // "Log Out" tapped
-        AACWelcomeViewController *welcomeViewController = [[AACWelcomeViewController alloc] initWithNibName:nil bundle:nil];
-        [self transitionViewController:welcomeViewController options:UIViewAnimationOptionTransitionFlipFromLeft];
-    }
 }
 
 @end
