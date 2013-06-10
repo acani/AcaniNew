@@ -58,7 +58,7 @@
     [(AACImageScrollView *)self.view setZoomScale];
 }
 
-// HACK: Fixes rotation bug.
+// Keep navigation bar below status bar. #hack
 // http://stackoverflow.com/a/6190485/242933
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
@@ -87,7 +87,7 @@
         CGFloat alpha = hidden ? 0 : 1;
 
         [UIView animateWithDuration:1/3.0 animations:^{
-            [application setStatusBarHidden:hidden withAnimation:UIStatusBarAnimationNone];
+            application.statusBarHidden = hidden;
             self.navigationController.navigationBar.alpha = alpha;
             ((AACPageViewController *)self.parentViewController).footer.alpha = alpha;
         }];

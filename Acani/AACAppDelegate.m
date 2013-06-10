@@ -22,6 +22,21 @@
     return YES;
 }
 
+// Keep navigation bar below status bar. #hack
+// http://stackoverflow.com/a/6190485/242933
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+    UINavigationController *navigationController = (UINavigationController *)_window.rootViewController;
+    if ([navigationController respondsToSelector:@selector(topViewController)]) {
+        if ([navigationController.topViewController respondsToSelector:@selector(facebookAction)]) {
+            if (!navigationController.navigationBar.alpha) {
+                [UIApplication sharedApplication].statusBarHidden = NO;
+                [self performSelector:@selector(hideStatusBar) withObject:nil afterDelay:0];
+            }
+        }
+    }
+}
+
 #pragma mark - Actions
 
 - (void)logInAction
@@ -44,6 +59,11 @@
 }
 
 #pragma mark - Helpers
+
+- (void)hideStatusBar
+{
+    [UIApplication sharedApplication].statusBarHidden = YES;
+}
 
 - (void)transitionViewController:(UIViewController *)viewController options:(UIViewAnimationOptions)options
 {
