@@ -8,13 +8,35 @@ var target = UIATarget.localTarget();
 var frontMostApp = target.frontMostApp();
 var mainWindow = frontMostApp.mainWindow();
 
+var rotate = function() {
+  target.setDeviceOrientation(UIA_DEVICE_ORIENTATION_LANDSCAPERIGHT);
+  target.delay(1);
+  target.setDeviceOrientation(UIA_DEVICE_ORIENTATION_PORTRAIT);
+  target.delay(1);
+};
+
 // Log In
 mainWindow.buttons()["Log In with Facebook"].tap();
+target.delay(1);
+
+rotate();
 
 // View Profile
 mainWindow.collectionViews()[0].cells()["0Small.jpg"].tap();
 
 var scrollView = mainWindow.scrollViews()[0];
+
+// - flick right
+scrollView.flickInsideWithOptions({startOffset:{x:0.0, y:0.5}, endOffset:{x:0.9, y:0.5}});
+target.delay(0.3);
+
+// - flick left 8 times
+for (var i = 0; i < 8; i++) {
+  scrollView.flickInsideWithOptions({startOffset:{x:0.9, y:0.5}, endOffset:{x:0.1, y:0.5}});
+  target.delay(0.3);
+}
+
+rotate();
 
 // - hide chrome
 scrollView.tap();
@@ -60,6 +82,8 @@ frontMostApp.navigationBar().leftButton().tap();
 // - settings
 frontMostApp.navigationBar().rightButton().tap();
 frontMostApp.actionSheet().buttons()["Settings"].tap();
+
+rotate();
 
 var cells = target.frontMostApp().mainWindow().tableViews()[0].cells();
 
