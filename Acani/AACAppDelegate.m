@@ -15,7 +15,6 @@
 {
     [[UINavigationBar appearance] setTintColor:AAC_ROSE_QUARTZ_COLOR];
 
-
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     _window.rootViewController = [[AACWelcomeViewController alloc] initWithNibName:nil bundle:nil];
 //    _window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[AACSettingsViewController alloc] initWithStyle:UITableViewStyleGrouped]];
