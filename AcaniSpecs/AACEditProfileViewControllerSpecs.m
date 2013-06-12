@@ -80,12 +80,12 @@
     UILabel *editPictureLabel = profilePictureButton.subviews[0];
     STAssertEquals([editPictureLabel class], [UILabel class], nil);
     STAssertEqualObjects(editPictureLabel.backgroundColor, [UIColor colorWithWhite:0 alpha:0.5], nil);
+    STAssertEquals(editPictureLabel.frame, CGRectMake(0, 44, 60, 16), nil);
     STAssertEqualObjects(editPictureLabel.font, [UIFont boldSystemFontOfSize:10],nil);
     STAssertEqualObjects(editPictureLabel.text, NSLocalizedString(@"edit", nil), nil);
     STAssertEquals(editPictureLabel.textAlignment, NSTextAlignmentCenter, nil);
     STAssertEqualObjects(editPictureLabel.textColor, [UIColor whiteColor], nil);
     STAssertEquals(editPictureLabel.userInteractionEnabled, NO, nil);
-    [profilePictureButton addSubview:editPictureLabel];
 
     UILabel *nameLabel = tableHeaderView.subviews[1];
     STAssertEquals([nameLabel class], [UILabel class], nil);
