@@ -34,12 +34,13 @@
 		D264A2DF173C76A6005D6298 /* AACWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D264A2DE173C76A6005D6298 /* AACWelcomeViewController.m */; };
 		D264A2E21742553C005D6298 /* AACProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D264A2E11742553C005D6298 /* AACProfileViewController.m */; };
 		D264A2E51742B9D7005D6298 /* AACImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D264A2E41742B9D7005D6298 /* AACImageScrollView.m */; };
-		D27CF3C31765DD4A000D45ED /* FacebookBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D27CF3C21765DD4A000D45ED /* FacebookBackground.png */; };
+		D27C68D317692B9C0000EAE1 /* FacebookButtonHighlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D27C68D217692B9C0000EAE1 /* FacebookButtonHighlighted@2x.png */; };
+		D27CF3C31765DD4A000D45ED /* FacebookButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D27CF3C21765DD4A000D45ED /* FacebookButton@2x.png */; };
 		D27CF3C91765F0D7000D45ED /* SettingsCog@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D27CF3C81765F0D7000D45ED /* SettingsCog@2x.png */; };
 		D27CF3CC1765F291000D45ED /* AACSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27CF3CB1765F291000D45ED /* AACSettingsViewController.m */; };
 		D27CF3CE1765F2AF000D45ED /* AACSettingsViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D27CF3CD1765F2AF000D45ED /* AACSettingsViewControllerSpecs.m */; };
 		D27CF3D117660A38000D45ED /* UIViewController+Acani.m in Sources */ = {isa = PBXBuildFile; fileRef = D27CF3D017660A38000D45ED /* UIViewController+Acani.m */; };
-		D27CF3D317661705000D45ED /* DeleteBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D27CF3D217661705000D45ED /* DeleteBackground.png */; };
+		D27CF3D317661705000D45ED /* DeleteButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D27CF3D217661705000D45ED /* DeleteButton@2x.png */; };
 		D27CF3D517661EDC000D45ED /* AACWebViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D27CF3D417661EDC000D45ED /* AACWebViewControllerSpecs.m */; };
 		D27CF3D817661EF2000D45ED /* AACWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27CF3D717661EF2000D45ED /* AACWebViewController.m */; };
 		D27CF3DA1766249F000D45ED /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D27CF3D91766249F000D45ED /* MessageUI.framework */; };
@@ -122,14 +123,15 @@
 		D264A2E11742553C005D6298 /* AACProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACProfileViewController.m; sourceTree = "<group>"; };
 		D264A2E31742B9D7005D6298 /* AACImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACImageScrollView.h; sourceTree = "<group>"; };
 		D264A2E41742B9D7005D6298 /* AACImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACImageScrollView.m; sourceTree = "<group>"; };
-		D27CF3C21765DD4A000D45ED /* FacebookBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookBackground.png; sourceTree = "<group>"; };
+		D27C68D217692B9C0000EAE1 /* FacebookButtonHighlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FacebookButtonHighlighted@2x.png"; sourceTree = "<group>"; };
+		D27CF3C21765DD4A000D45ED /* FacebookButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FacebookButton@2x.png"; sourceTree = "<group>"; };
 		D27CF3C81765F0D7000D45ED /* SettingsCog@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SettingsCog@2x.png"; sourceTree = "<group>"; };
 		D27CF3CA1765F291000D45ED /* AACSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACSettingsViewController.h; sourceTree = "<group>"; };
 		D27CF3CB1765F291000D45ED /* AACSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACSettingsViewController.m; sourceTree = "<group>"; };
 		D27CF3CD1765F2AF000D45ED /* AACSettingsViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACSettingsViewControllerSpecs.m; sourceTree = "<group>"; };
 		D27CF3CF17660A38000D45ED /* UIViewController+Acani.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Acani.h"; sourceTree = "<group>"; };
 		D27CF3D017660A38000D45ED /* UIViewController+Acani.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Acani.m"; sourceTree = "<group>"; };
-		D27CF3D217661705000D45ED /* DeleteBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeleteBackground.png; sourceTree = "<group>"; };
+		D27CF3D217661705000D45ED /* DeleteButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DeleteButton@2x.png"; sourceTree = "<group>"; };
 		D27CF3D417661EDC000D45ED /* AACWebViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACWebViewControllerSpecs.m; sourceTree = "<group>"; };
 		D27CF3D617661EF2000D45ED /* AACWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACWebViewController.h; sourceTree = "<group>"; };
 		D27CF3D717661EF2000D45ED /* AACWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACWebViewController.m; sourceTree = "<group>"; };
@@ -442,8 +444,9 @@
 		D2E216EC1760DB8C00AC41DE /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				D27CF3D217661705000D45ED /* DeleteBackground.png */,
-				D27CF3C21765DD4A000D45ED /* FacebookBackground.png */,
+				D27CF3D217661705000D45ED /* DeleteButton@2x.png */,
+				D27CF3C21765DD4A000D45ED /* FacebookButton@2x.png */,
+				D27C68D217692B9C0000EAE1 /* FacebookButtonHighlighted@2x.png */,
 				D2E216E91760DB7100AC41DE /* FacebookIcon@2x.png */,
 				D27CF3C81765F0D7000D45ED /* SettingsCog@2x.png */,
 			);
@@ -552,9 +555,10 @@
 				D2EE946C174D9D750046704E /* 7Large.jpg in Resources */,
 				D2EE946D174D9D750046704E /* 7Small.jpg in Resources */,
 				D2E216EB1760DB7100AC41DE /* FacebookIcon@2x.png in Resources */,
-				D27CF3C31765DD4A000D45ED /* FacebookBackground.png in Resources */,
+				D27CF3C31765DD4A000D45ED /* FacebookButton@2x.png in Resources */,
 				D27CF3C91765F0D7000D45ED /* SettingsCog@2x.png in Resources */,
-				D27CF3D317661705000D45ED /* DeleteBackground.png in Resources */,
+				D27CF3D317661705000D45ED /* DeleteButton@2x.png in Resources */,
+				D27C68D317692B9C0000EAE1 /* FacebookButtonHighlighted@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

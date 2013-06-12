@@ -14,17 +14,24 @@
     UIView *view = self.view;
     view.backgroundColor = AAC_ROSE_QUARTZ_COLOR;
 
-    CGRect frame = CGRectMake(20, 40, view.frame.size.width-20*2, 80);
+    CGRect frame = CGRectMake(20, 40, 280, 80);
     AACLogoLabel *logoLabel = [[AACLogoLabel alloc] initWithFrame:frame];
     [view addSubview:logoLabel];
 
     UIButton *logInButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    logInButton.frame = CGRectMake(60, 300, 200, 44);
+    logInButton.frame = CGRectMake(46, 310, 228, 44);
     logInButton.layer.cornerRadius = 7;
     logInButton.layer.masksToBounds = YES;
     logInButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
-    [logInButton setBackgroundImage:[UIImage imageNamed:@"FacebookBackground"] forState:UIControlStateNormal];
+    UIEdgeInsets insets = UIEdgeInsetsMake(0, 46, 0, 8);
+    UIImage *image = [UIImage imageNamed:@"FacebookButton"];
+    image = [image resizableImageWithCapInsets:insets];
+    [logInButton setBackgroundImage:image forState:UIControlStateNormal];
+    image = [UIImage imageNamed:@"FacebookButtonHighlighted"];
+    image = [image resizableImageWithCapInsets:insets];
+    [logInButton setBackgroundImage:image forState:UIControlStateHighlighted];
     [logInButton setTitle:NSLocalizedString(@"Log In with Facebook", nil) forState:UIControlStateNormal];
+    logInButton.titleEdgeInsets = insets;
     [logInButton addTarget:[UIApplication sharedApplication].delegate action:@selector(logInAction) forControlEvents:UIControlEventTouchUpInside];
     [view addSubview:logInButton];
 }

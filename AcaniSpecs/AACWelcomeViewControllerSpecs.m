@@ -38,18 +38,24 @@
 
     UILabel *logoLabel = view.subviews[0];
     STAssertEquals([logoLabel class], [AACLogoLabel class], nil);
-    STAssertEquals(logoLabel.frame, CGRectMake(20, 40, view.frame.size.width-20*2, 80), nil);
+    STAssertEquals(logoLabel.frame, CGRectMake(20, 40, 280, 80), nil);
 
     UIButton *logInButton = view.subviews[1];
     STAssertEquals(logInButton.buttonType, UIButtonTypeCustom, nil);
-    STAssertEquals(logInButton.frame, CGRectMake(60, 300, 200, 44), nil);
+    STAssertEquals(logInButton.frame, CGRectMake(46, 310, 228, 44), nil);
     STAssertEquals(logInButton.layer.cornerRadius, (CGFloat)7, nil);
     STAssertTrue(logInButton.layer.masksToBounds, nil);
     STAssertEqualObjects(logInButton.titleLabel.font, [UIFont boldSystemFontOfSize:16], nil);
-    STAssertEqualObjects([logInButton backgroundImageForState:UIControlStateNormal], [UIImage imageNamed:@"FacebookBackground"], nil);
+    UIEdgeInsets insets = UIEdgeInsetsMake(0, 46, 0, 8);
+    UIImage *image = [UIImage imageNamed:@"FacebookButton"];
+    image = [image resizableImageWithCapInsets:insets];
+    STAssertEqualObjects(UIImagePNGRepresentation([logInButton backgroundImageForState:UIControlStateNormal]), UIImagePNGRepresentation(image), nil);
+    image = [UIImage imageNamed:@"FacebookButtonHighlighted"];
+    image = [image resizableImageWithCapInsets:insets];
+    STAssertEqualObjects(UIImagePNGRepresentation([logInButton backgroundImageForState:UIControlStateHighlighted]), UIImagePNGRepresentation(image), nil);
     STAssertEqualObjects([logInButton titleForState:UIControlStateNormal], NSLocalizedString(@"Log In with Facebook", nil), nil);
+    STAssertEquals(logInButton.titleEdgeInsets, insets, nil);
     [self control:logInButton specTarget:[UIApplication sharedApplication].delegate action:@selector(logInAction) forControlEvents:UIControlEventTouchUpInside];
-
 }
 
 - (void)specShouldAutorotato

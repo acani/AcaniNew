@@ -26,6 +26,13 @@ UIBarButtonItem *ActivityIndicatorBarButtonItem()
     return self;
 }
 
+#pragma mark - NSObject
+
+- (void)dealloc
+{
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+}
+
 #pragma mark - UIViewController
 
 - (void)loadView

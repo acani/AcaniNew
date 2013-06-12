@@ -39,7 +39,9 @@
     deleteAccountButton.layer.cornerRadius = 8;
     deleteAccountButton.layer.masksToBounds = YES;
     deleteAccountButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];
-    [deleteAccountButton setBackgroundImage:[UIImage imageNamed:@"DeleteBackground"] forState:UIControlStateNormal];
+    UIImage *image = [UIImage imageNamed:@"DeleteButton"];
+    image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(0, 6, 0, 6)];
+    [deleteAccountButton setBackgroundImage:image forState:UIControlStateNormal];
     [deleteAccountButton setTitle:NSLocalizedString(@"Delete Account", nil) forState:UIControlStateNormal];
     [deleteAccountButton addTarget:self action:@selector(deleteAccountAction) forControlEvents:UIControlEventTouchUpInside];
     [tableFooterView addSubview:deleteAccountButton];
