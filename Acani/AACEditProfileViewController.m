@@ -6,6 +6,8 @@
 
 @implementation AACEditProfileViewController
 
+#pragma mark - Designated Initializer
+
 - (id)initWithUser:(AACUser *)user
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
@@ -19,7 +21,8 @@
 
 #pragma mark - Properties
 
-- (UITextView *)bioTextView {
+- (UITextView *)bioTextView
+{
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     return (UITextView *)[cell.contentView viewWithTag:BIO_TAG];

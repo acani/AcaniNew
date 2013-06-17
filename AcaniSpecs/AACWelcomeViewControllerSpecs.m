@@ -46,15 +46,22 @@
     STAssertEquals(logInButton.layer.cornerRadius, (CGFloat)7, nil);
     STAssertTrue(logInButton.layer.masksToBounds, nil);
     STAssertEqualObjects(logInButton.titleLabel.font, [UIFont boldSystemFontOfSize:16], nil);
+
     UIEdgeInsets insets = UIEdgeInsetsMake(0, 46, 0, 8);
-    UIImage *image = [UIImage imageNamed:@"FacebookButton"];
-    image = [image resizableImageWithCapInsets:insets];
-    STAssertEqualObjects(UIImagePNGRepresentation([logInButton backgroundImageForState:UIControlStateNormal]), UIImagePNGRepresentation(image), nil);
-    image = [UIImage imageNamed:@"FacebookButtonHighlighted"];
-    image = [image resizableImageWithCapInsets:insets];
-    STAssertEqualObjects(UIImagePNGRepresentation([logInButton backgroundImageForState:UIControlStateHighlighted]), UIImagePNGRepresentation(image), nil);
+
+    UIImage *image0 = [logInButton backgroundImageForState:UIControlStateNormal];
+    UIImage *image1 = [UIImage imageNamed:@"FacebookButton"];
+    STAssertEqualObjects(UIImagePNGRepresentation(image0), UIImagePNGRepresentation(image1), nil);
+    STAssertEquals(image0.capInsets, insets, nil);
+
+    image0 = [logInButton backgroundImageForState:UIControlStateHighlighted];
+    image1 = [UIImage imageNamed:@"FacebookButtonHighlighted"];
+    STAssertEqualObjects(UIImagePNGRepresentation(image0), UIImagePNGRepresentation(image1), nil);
+    STAssertEquals(image0.capInsets, insets, nil);
+
     STAssertEqualObjects([logInButton titleForState:UIControlStateNormal], NSLocalizedString(@"Log In with Facebook", nil), nil);
     STAssertEquals(logInButton.titleEdgeInsets, insets, nil);
+
     [self control:logInButton specTarget:[UIApplication sharedApplication].delegate action:@selector(logInAction) forControlEvents:UIControlEventTouchUpInside];
 }
 

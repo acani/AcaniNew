@@ -5,7 +5,7 @@
 @interface AACPageViewController : UIPageViewController
 
 @property (strong, nonatomic, readonly) UITextView *bioTextView;
-@property (strong, nonatomic) UIView *footer;
+@property (strong, nonatomic, readonly) UIView *footer;
 
 - (id)initWithUser:(AACUser *)user;
 
