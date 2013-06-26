@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Update Facebook.
 if cd Libraries/FacebookSDK; then
     if git checkout master &&
