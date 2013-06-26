@@ -1,3 +1,4 @@
+#import <Crashlytics/Crashlytics.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "AACAppDelegate.h"
 #import "AACDefines.h"
@@ -13,6 +14,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Crashlytics startWithAPIKey:@"ed486ebce97cfed0fdfc621c09ac7d777cbadd03"];
+
     [[UINavigationBar appearance] setTintColor:AAC_ROSE_QUARTZ_COLOR];
 
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

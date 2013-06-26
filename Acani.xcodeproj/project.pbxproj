@@ -76,6 +76,7 @@
 		D2EE946D174D9D750046704E /* 7Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2EE946B174D9D750046704E /* 7Small.jpg */; };
 		D2EE94701754DCBD0046704E /* AACPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EE946F1754DCBD0046704E /* AACPageViewController.m */; };
 		D2EE94731755315C0046704E /* AACEditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EE94721755315B0046704E /* AACEditProfileViewController.m */; };
+		D2F98804177A292700A1409C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F98803177A292700A1409C /* Crashlytics.framework */; };
 		D2FA67E4175C03220093BC56 /* AACEditProfileViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FA67E3175C03220093BC56 /* AACEditProfileViewControllerSpecs.m */; };
 		D2FA67E7175EC2410093BC56 /* AACApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FA67E6175EC2410093BC56 /* AACApplication.m */; };
 /* End PBXBuildFile section */
@@ -181,6 +182,7 @@
 		D2EE946F1754DCBD0046704E /* AACPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACPageViewController.m; sourceTree = "<group>"; };
 		D2EE94711755315B0046704E /* AACEditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACEditProfileViewController.h; sourceTree = "<group>"; };
 		D2EE94721755315B0046704E /* AACEditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACEditProfileViewController.m; sourceTree = "<group>"; };
+		D2F98803177A292700A1409C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = Libraries/Crashlytics.framework; sourceTree = "<group>"; };
 		D2FA67E3175C03220093BC56 /* AACEditProfileViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AACEditProfileViewControllerSpecs.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		D2FA67E5175EC2410093BC56 /* AACApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACApplication.h; sourceTree = "<group>"; };
 		D2FA67E6175EC2410093BC56 /* AACApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACApplication.m; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D27E3FD717119B9700E29BAF /* CoreGraphics.framework in Frameworks */,
+				D2F98804177A292700A1409C /* Crashlytics.framework in Frameworks */,
 				D264A2D9173C73D0005D6298 /* FacebookSDK.framework in Frameworks */,
 				D27E3FD917119B9700E29BAF /* Foundation.framework in Frameworks */,
 				D27CF3DA1766249F000D45ED /* MessageUI.framework in Frameworks */,
@@ -330,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				D27E3FD617119B9700E29BAF /* CoreGraphics.framework */,
+				D2F98803177A292700A1409C /* Crashlytics.framework */,
 				D264A2D8173C73D0005D6298 /* FacebookSDK.framework */,
 				D27E3FD817119B9700E29BAF /* Foundation.framework */,
 				D27CF3D91766249F000D45ED /* MessageUI.framework */,
@@ -473,6 +477,7 @@
 				D27E3FCF17119B9700E29BAF /* Sources */,
 				D27E3FD017119B9700E29BAF /* Frameworks */,
 				D27E3FD117119B9700E29BAF /* Resources */,
+				D2F98802177A28B400A1409C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -593,6 +598,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run specs.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n\n# TODO: Get this working. Ask on Stack Overflow. Ask Sam.\n# Run features.\n# instruments -t \"${DEVELOPER_DIR}/../Applications/Instruments.app/Contents/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate\" \"${TEST_HOST}\" -e UIASCRIPT \"${SRCROOT}/AcaniFeatures/AcaniFeatures.js\" -e UIARESULTSPATH \"/Users/mattdipasquale/Desktop/UI Automation Output\"";
+		};
+		D2F98802177A28B400A1409C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Libraries/Crashlytics.framework/run ed486ebce97cfed0fdfc621c09ac7d777cbadd03";
 		};
 /* End PBXShellScriptBuildPhase section */
 
