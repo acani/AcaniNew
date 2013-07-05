@@ -154,7 +154,6 @@
 		D27E3FD617119B9700E29BAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D27E3FD817119B9700E29BAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D27E3FDA17119B9700E29BAF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		D27E3FDD17119B9700E29BAF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		D27E3FDF17119B9700E29BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D27E3FE017119B9700E29BAF /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		D27E3FE117119B9700E29BAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -333,7 +332,6 @@
 				D27E3FD517119B9700E29BAF /* Libraries */,
 				D27E3FD417119B9700E29BAF /* Products */,
 				D2747FA41771DAF0000CF0D9 /* Scripts */,
-				D27E3FDD17119B9700E29BAF /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
