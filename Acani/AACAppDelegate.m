@@ -98,7 +98,7 @@
 {
     [[FBSession activeSession] closeAndClearTokenInformation];
     AACWelcomeViewController *welcomeViewController = [[AACWelcomeViewController alloc] initWithNibName:nil bundle:nil];
-    [self transitionViewController:welcomeViewController options:UIViewAnimationOptionTransitionFlipFromLeft];
+    _window.rootViewController = welcomeViewController;
 }
 
 - (void)deleteAccountAction
@@ -115,24 +115,12 @@
     // TODO: Open URL (for specific page) in completion block if app was last opened with one.
     AACUsersViewController *usersViewController = [[AACUsersViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:usersViewController];
-    [self transitionViewController:navigationController options:UIViewAnimationOptionTransitionFlipFromRight];
+    _window.rootViewController = navigationController;
 }
 
 - (void)hideStatusBar
 {
     [UIApplication sharedApplication].statusBarHidden = YES;
-}
-
-- (void)transitionViewController:(UIViewController *)viewController options:(UIViewAnimationOptions)options
-{
-    // HACK: Load `viewController` before transition.
-    UIViewController *rootViewController = _window.rootViewController;
-    _window.rootViewController = viewController;
-    _window.rootViewController = rootViewController;
-
-    [UIView transitionWithView:_window duration:0.6 options:UIViewAnimationOptionAllowAnimatedContent|options animations:^{
-        _window.rootViewController = viewController;
-    } completion:nil];
 }
 
 @end
