@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF2766CD17920E60002D8DA8 /* ACMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2766CC17920E60002D8DA8 /* ACMessagesViewController.m */; };
+		AF2766CF17921039002D8DA8 /* ACMessagesViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2766CE17921039002D8DA8 /* ACMessagesViewControllerSpecs.m */; };
 		D211D7191745531900A0FF65 /* 2Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D211D7161745531900A0FF65 /* 2Small.jpg */; };
 		D211D71A1745531900A0FF65 /* 2Small@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D211D7171745531900A0FF65 /* 2Small@2x.jpg */; };
 		D211D71B1745531900A0FF65 /* 2Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D211D7181745531900A0FF65 /* 2Large.jpg */; };
@@ -98,6 +100,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF2766CB17920E60002D8DA8 /* ACMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACMessagesViewController.h; sourceTree = "<group>"; };
+		AF2766CC17920E60002D8DA8 /* ACMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMessagesViewController.m; sourceTree = "<group>"; };
+		AF2766CE17921039002D8DA8 /* ACMessagesViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACMessagesViewControllerSpecs.m; sourceTree = "<group>"; };
 		D211D7161745531900A0FF65 /* 2Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2Small.jpg; sourceTree = "<group>"; };
 		D211D7171745531900A0FF65 /* 2Small@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2Small@2x.jpg"; sourceTree = "<group>"; };
 		D211D7181745531900A0FF65 /* 2Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2Large.jpg; sourceTree = "<group>"; };
@@ -293,6 +298,7 @@
 				D226893617288AA100984626 /* AACUsersViewControllerSpecs.m */,
 				D27CF3D417661EDC000D45ED /* AACWebViewControllerSpecs.m */,
 				D27F8A0F175F4A7800B1ACCE /* AACWelcomeViewControllerSpecs.m */,
+				AF2766CE17921039002D8DA8 /* ACMessagesViewControllerSpecs.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -456,6 +462,8 @@
 		D27E40161711A71A00E29BAF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AF2766CB17920E60002D8DA8 /* ACMessagesViewController.h */,
+				AF2766CC17920E60002D8DA8 /* ACMessagesViewController.m */,
 				D27CF3CF17660A38000D45ED /* UIViewController+Acani.h */,
 				D27CF3D017660A38000D45ED /* UIViewController+Acani.m */,
 				D2EE94711755315B0046704E /* AACEditProfileViewController.h */,
@@ -656,6 +664,7 @@
 				D27CF3CC1765F291000D45ED /* AACSettingsViewController.m in Sources */,
 				D27CF3D117660A38000D45ED /* UIViewController+Acani.m in Sources */,
 				D27CF3D817661EF2000D45ED /* AACWebViewController.m in Sources */,
+				AF2766CD17920E60002D8DA8 /* ACMessagesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +687,7 @@
 				D27F8A201760180900B1ACCE /* AACProfileViewControllerSpecs.m in Sources */,
 				D27CF3CE1765F2AF000D45ED /* AACSettingsViewControllerSpecs.m in Sources */,
 				D27CF3D517661EDC000D45ED /* AACWebViewControllerSpecs.m in Sources */,
+				AF2766CF17921039002D8DA8 /* ACMessagesViewControllerSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
