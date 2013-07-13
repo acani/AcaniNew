@@ -13,9 +13,10 @@ typedef NS_ENUM(NSInteger, AACUserPictureType) {
 @property (nonatomic, copy) NSString *lastName;
 @property (nonatomic, copy) NSString *uniqueIdentifier;
 
++ (AACUser *)meUser;
++ (void)setMeUser:(AACUser *)user;
+
 - (NSString *)name;
 - (NSString *)pictureNameOfType:(AACUserPictureType)pictureType;
 
 @end
-
-FOUNDATION_EXTERN AACUser *meUser;

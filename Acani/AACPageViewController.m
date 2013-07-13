@@ -15,7 +15,7 @@
 {
     self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     if (self) {
-        if (user == meUser) self.navigationItem.rightBarButtonItem = self.editButtonItem;
+        if (user == [AACUser meUser]) self.navigationItem.rightBarButtonItem = self.editButtonItem;
         AACProfileViewController *profileViewController = [[AACProfileViewController alloc] initWithUser:user];
         self.title = profileViewController.title;
         self.wantsFullScreenLayout = YES;

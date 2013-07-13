@@ -60,11 +60,11 @@
 
 - (void)specInitWithMeUser_
 {
-    meUser = _user;
+    [AACUser setMeUser:_user];
     _pageViewController = [[AACPageViewController alloc] initWithUser:_user];
     UIBarButtonItem *rightBarButtonItem = _pageViewController.navigationItem.rightBarButtonItem;
     STAssertEquals(rightBarButtonItem, _pageViewController.editButtonItem, nil);
-    meUser = nil;
+    [AACUser setMeUser:nil];
 }
 
 #pragma mark - UIViewController

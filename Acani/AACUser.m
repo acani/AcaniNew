@@ -1,8 +1,18 @@
 #import "AACUser.h"
 
-AACUser *meUser;
+static AACUser *_meUser;
 
 @implementation AACUser
+
++ (AACUser *)meUser
+{
+    return _meUser;
+}
+
++ (void)setMeUser:(AACUser *)user
+{
+    _meUser = user;
+}
 
 - (NSString *)name
 {

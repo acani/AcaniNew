@@ -58,12 +58,13 @@ static NSString *CellIdentifier = @"ACUserCell";
 
     [self.collectionView registerClass:[AACUserCell class] forCellWithReuseIdentifier:CellIdentifier];
 
-    meUser = [[AACUser alloc] init];
-    meUser.bio = @"Hello! My name is Lauren. I am *Amazing*, gorgeous, intelligent, genius, loving, courageous, fun, funny, healthy, wealthy, wise, playful, happy, flexible, open-minded, confident, and sexy.";
-    meUser.facebookID = @"4";
-    meUser.firstName = @"Lauren";
-    meUser.lastName = @"Di Pasquale";
-    meUser.uniqueIdentifier = @"0";
+    AACUser *user0 = [[AACUser alloc] init];
+    user0.bio = @"Hello! My name is Lauren. I am *Amazing*, gorgeous, intelligent, genius, loving, courageous, fun, funny, healthy, wealthy, wise, playful, happy, flexible, open-minded, confident, and sexy.";
+    user0.facebookID = @"4";
+    user0.firstName = @"Lauren";
+    user0.lastName = @"Di Pasquale";
+    user0.uniqueIdentifier = @"0";
+    [AACUser setMeUser:user0];
 
     AACUser *user1 = [[AACUser alloc] init];
     user1.bio = @"Hello! My name is Matt. I am *Amazing*, gorgeous, intelligent, genius, loving, courageous, fun, funny, healthy, wealthy, wise, playful, happy, flexible, open-minded, confident, and sexy. Check out my website: mattdipasquale.com";
@@ -114,7 +115,7 @@ static NSString *CellIdentifier = @"ACUserCell";
     user7.lastName = @"Inc.";
     user7.uniqueIdentifier = @"7";
 
-    _users = @[meUser, user1, user2, user3, user4, user5, user6, user7];
+    _users = @[user0, user1, user2, user3, user4, user5, user6, user7];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -209,7 +210,7 @@ static NSString *CellIdentifier = @"ACUserCell";
         AACUser *user = profileViewController.user;
         pageViewController.title = profileViewController.title;
         pageViewController.bioTextView.text = user.bio;
-        pageViewController.navigationItem.rightBarButtonItem = (user == meUser ? self.editButtonItem : nil);
+        pageViewController.navigationItem.rightBarButtonItem = (user == [AACUser meUser] ? self.editButtonItem : nil);
     }
 }
 
