@@ -291,6 +291,27 @@
 			name = Pictures;
 			sourceTree = "<group>";
 		};
+		D24DF64A17930E13008B9DF1 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				D2FA67E5175EC2410093BC56 /* AACApplication.h */,
+				D2FA67E6175EC2410093BC56 /* AACApplication.m */,
+				D27CF3CF17660A38000D45ED /* UIViewController+Acani.h */,
+				D27CF3D017660A38000D45ED /* UIViewController+Acani.m */,
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
+		D24DF64B17930EAE008B9DF1 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				D27F8A18175FF62900B1ACCE /* AACSpecs.h */,
+				D27F8A19175FF62900B1ACCE /* AACSpecs.m */,
+				D27E400217119B9800E29BAF /* NSInvocation+SetTestMethodPrefixToSpec.m */,
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
 		D25F917817297562003051EF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,14 +399,13 @@
 			isa = PBXGroup;
 			children = (
 				D29CA2AF1735DAD600B5052B /* AACDefines.h */,
-				D2FA67E5175EC2410093BC56 /* AACApplication.h */,
-				D2FA67E6175EC2410093BC56 /* AACApplication.m */,
 				D27E3FE317119B9700E29BAF /* AACAppDelegate.h */,
 				D27E3FE417119B9700E29BAF /* AACAppDelegate.m */,
 				D27E40161711A71A00E29BAF /* Controllers */,
 				D226891E1728376600984626 /* Models */,
 				D22689171728351100984626 /* Views */,
 				D27E3FE617119B9700E29BAF /* Resources */,
+				D24DF64A17930E13008B9DF1 /* General */,
 				D27E3FDE17119B9700E29BAF /* Supporting Files */,
 			);
 			path = Acani;
@@ -435,12 +455,11 @@
 			isa = PBXGroup;
 			children = (
 				D27F8A16175F5A3500B1ACCE /* AACDefinesSpecs.m */,
-				D27F8A18175FF62900B1ACCE /* AACSpecs.h */,
-				D27F8A19175FF62900B1ACCE /* AACSpecs.m */,
 				D27E400417119B9800E29BAF /* AACAppDelegateSpecs.m */,
 				D25F917817297562003051EF /* Controllers */,
 				D25F917917297567003051EF /* Models */,
 				D25F917A1729756A003051EF /* Views */,
+				D24DF64B17930EAE008B9DF1 /* General */,
 				D27E400017119B9800E29BAF /* Supporting Files */,
 			);
 			path = AcaniSpecs;
@@ -450,7 +469,6 @@
 			isa = PBXGroup;
 			children = (
 				D27E400117119B9800E29BAF /* Info.plist */,
-				D27E400217119B9800E29BAF /* NSInvocation+SetTestMethodPrefixToSpec.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -468,8 +486,6 @@
 			children = (
 				AF2766CB17920E60002D8DA8 /* ACMessagesViewController.h */,
 				AF2766CC17920E60002D8DA8 /* ACMessagesViewController.m */,
-				D27CF3CF17660A38000D45ED /* UIViewController+Acani.h */,
-				D27CF3D017660A38000D45ED /* UIViewController+Acani.m */,
 				D2EE94711755315B0046704E /* AACEditProfileViewController.h */,
 				D2EE94721755315B0046704E /* AACEditProfileViewController.m */,
 				D2EE946E1754DCBD0046704E /* AACPageViewController.h */,
