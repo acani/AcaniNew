@@ -23,7 +23,7 @@
     _user.firstName = @"Matt";
     _user.lastName = @"Di Pasquale";
     _user.uniqueIdentifier = @"1";
-    
+
     _pageViewController = [[AACPageViewController alloc] initWithUser:_user];
 }
 
@@ -46,7 +46,7 @@
 {
     STAssertNotNil(_pageViewController, nil);
     STAssertEquals([_pageViewController class], [AACPageViewController class], nil);
-    
+
     STAssertNotNil(_user, nil);
     STAssertEquals([_user class], [AACUser class], nil);
 

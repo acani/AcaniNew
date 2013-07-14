@@ -47,7 +47,7 @@
     [profilePictureButton setBackgroundImage:pictureImage forState:UIControlStateNormal];
     [profilePictureButton addTarget:self action:@selector(editProfilePictureAction) forControlEvents:UIControlEventTouchUpInside];
     [tableHeaderView addSubview:profilePictureButton];
-    
+
     UILabel *editPictureLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 44, 60, 16)];
     editPictureLabel.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
     editPictureLabel.font = [UIFont boldSystemFontOfSize:12];
