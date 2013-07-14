@@ -33,6 +33,7 @@
 		D226893317287E6800984626 /* 0Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D226892F17287E6800984626 /* 0Small.jpg */; };
 		D226893417287E6800984626 /* 0Small@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D226893017287E6800984626 /* 0Small@2x.jpg */; };
 		D226893717288AA100984626 /* AACUsersViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D226893617288AA100984626 /* AACUsersViewControllerSpecs.m */; };
+		D24DF6491792E484008B9DF1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D24DF6481792E483008B9DF1 /* QuartzCore.framework */; };
 		D25F916D17296299003051EF /* AACUserSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = D25F916C17296299003051EF /* AACUserSpecs.m */; };
 		D25F91731729678A003051EF /* 1Large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25F916F1729678A003051EF /* 1Large.jpg */; };
 		D25F91741729678A003051EF /* 1Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D25F91701729678A003051EF /* 1Small.jpg */; };
@@ -129,6 +130,7 @@
 		D226892F17287E6800984626 /* 0Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0Small.jpg; sourceTree = "<group>"; };
 		D226893017287E6800984626 /* 0Small@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "0Small@2x.jpg"; sourceTree = "<group>"; };
 		D226893617288AA100984626 /* AACUsersViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AACUsersViewControllerSpecs.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		D24DF6481792E483008B9DF1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D25F916C17296299003051EF /* AACUserSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACUserSpecs.m; sourceTree = "<group>"; };
 		D25F916F1729678A003051EF /* 1Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1Large.jpg; sourceTree = "<group>"; };
 		D25F91701729678A003051EF /* 1Small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1Small.jpg; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				D27E3FD917119B9700E29BAF /* Foundation.framework in Frameworks */,
 				D223B24F177BBF2300EEAF9B /* libsqlite3.dylib in Frameworks */,
 				D27CF3DA1766249F000D45ED /* MessageUI.framework in Frameworks */,
+				D24DF6491792E484008B9DF1 /* QuartzCore.framework in Frameworks */,
 				D223B24D177BBEE900EEAF9B /* Security.framework in Frameworks */,
 				D223B24B177BBEC300EEAF9B /* Social.framework in Frameworks */,
 				D27E3FDB17119B9700E29BAF /* UIKit.framework in Frameworks */,
@@ -362,6 +365,7 @@
 				D27E3FD817119B9700E29BAF /* Foundation.framework */,
 				D223B24E177BBF2300EEAF9B /* libsqlite3.dylib */,
 				D27CF3D91766249F000D45ED /* MessageUI.framework */,
+				D24DF6481792E483008B9DF1 /* QuartzCore.framework */,
 				D223B24C177BBEE900EEAF9B /* Security.framework */,
 				D27E3FF917119B9800E29BAF /* SenTestingKit.framework */,
 				D223B24A177BBEC300EEAF9B /* Social.framework */,

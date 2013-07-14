@@ -1,8 +1,10 @@
 #ifdef __OBJC__
 
-// Frameworks
-#import <CoreGraphics/CoreGraphics.h>
+#import <Crashlytics/Crashlytics.h>
+#import <FacebookSDK/FacebookSDK.h>
 #import <Foundation/Foundation.h>
+#import <MessageUI/MessageUI.h>
+#import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
 
 #endif
