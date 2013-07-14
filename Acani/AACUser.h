@@ -7,11 +7,11 @@ typedef NS_ENUM(NSInteger, AACUserPictureType) {
 
 @interface AACUser : NSObject
 
-@property (nonatomic, copy) NSString *bio;
-@property (nonatomic, copy) NSString *facebookID;
-@property (nonatomic, copy) NSString *firstName;
-@property (nonatomic, copy) NSString *lastName;
-@property (nonatomic, copy) NSString *uniqueIdentifier;
+@property (copy, nonatomic) NSString *bio;
+@property (copy, nonatomic) NSString *facebookID;
+@property (copy, nonatomic) NSString *firstName;
+@property (copy, nonatomic) NSString *lastName;
+@property (copy, nonatomic) NSString *uniqueIdentifier;
 
 + (AACUser *)meUser;
 + (void)setMeUser:(AACUser *)user;

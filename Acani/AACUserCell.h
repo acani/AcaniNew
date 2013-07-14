@@ -2,6 +2,6 @@
 
 @interface AACUserCell : UICollectionViewCell
 
-@property (strong, nonatomic, readonly) UILabel *nameLabel;
+@property (nonatomic, readonly) UILabel *nameLabel;
 
 @end

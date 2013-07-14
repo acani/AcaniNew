@@ -4,7 +4,7 @@
 
 @interface AACEditProfileViewController : UITableViewController
 
-@property (strong, nonatomic) AACUser *user;
+@property (nonatomic) AACUser *user;
 
 - (id)initWithUser:(AACUser *)user;
 

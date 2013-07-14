@@ -10,6 +10,8 @@
 
 @implementation AACAppDelegate
 
+@synthesize window = _window;
+
 #pragma mark - UIApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

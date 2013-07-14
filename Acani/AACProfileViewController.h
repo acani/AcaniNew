@@ -4,7 +4,7 @@
 
 @interface AACProfileViewController : UIViewController
 
-@property (strong, nonatomic) AACUser *user;
+@property (nonatomic) AACUser *user;
 
 - (id)initWithUser:(AACUser *)user;
 

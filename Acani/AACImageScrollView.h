@@ -4,7 +4,7 @@
 // New: https://github.com/kirbyt/KTPhotoBrowser
 @interface AACImageScrollView : UIScrollView
 
-@property (strong, nonatomic) UITapGestureRecognizer *doubleTapGestureRecognizer;
+@property (nonatomic) UITapGestureRecognizer *doubleTapGestureRecognizer;
 
 - (void)setImage:(UIImage *)image;
 - (void)setZoomScale;
