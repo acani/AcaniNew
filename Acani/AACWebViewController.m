@@ -10,12 +10,11 @@ UIBarButtonItem *ActivityIndicatorBarButtonItem()
     return [[UIBarButtonItem alloc] initWithCustomView:activityIndicatorView];
 }
 
-@interface AACWebViewController () <UIWebViewDelegate> {
+@interface AACWebViewController () <UIWebViewDelegate> @end
+
+@implementation AACWebViewController {
     NSString *_URLString;
 }
-@end
-
-@implementation AACWebViewController
 
 - (id)initWithURLString:(NSString *)URLString
 {

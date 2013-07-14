@@ -3,13 +3,11 @@
 #define ZOOM_STEP 3
 #define IS_ZOOMED_OUT() self.zoomScale == self.minimumZoomScale
 
-@interface AACImageScrollView () <UIScrollViewDelegate, UIActionSheetDelegate> {
+@interface AACImageScrollView () <UIScrollViewDelegate, UIActionSheetDelegate> @end
+
+@implementation AACImageScrollView {
     UIImageView *_imageView;
 }
-
-@end
-
-@implementation AACImageScrollView
 
 #pragma mark - UIView
 
