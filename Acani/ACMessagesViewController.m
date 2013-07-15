@@ -21,7 +21,7 @@
 #define TEXT_VIEW_WIDTH                      249 // 216 (with CameraButton)
 #define TEXT_VIEW_HEIGHT_MIN                 90
 #define ContentHeightMax                     80
-#define MESSAGES_LIMIT                  50
+#define MESSAGES_LIMIT                       50
 #define MESSAGE_SENT_DATE_SHOW_TIME_INTERVAL 13*60 // 13 minutes
 #define MESSAGE_SENT_DATE_LABEL_TAG          100
 #define MESSAGE_BACKGROUND_IMAGE_VIEW_TAG    101

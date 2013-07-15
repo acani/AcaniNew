@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF2766CD17920E60002D8DA8 /* ACMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2766CC17920E60002D8DA8 /* ACMessagesViewController.m */; };
 		AF2766CF17921039002D8DA8 /* ACMessagesViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2766CE17921039002D8DA8 /* ACMessagesViewControllerSpecs.m */; };
 		D211D7191745531900A0FF65 /* 2Small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D211D7161745531900A0FF65 /* 2Small.jpg */; };
 		D211D71A1745531900A0FF65 /* 2Small@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D211D7171745531900A0FF65 /* 2Small@2x.jpg */; };
@@ -684,7 +683,6 @@
 				D27CF3CC1765F291000D45ED /* AACSettingsViewController.m in Sources */,
 				D27CF3D117660A38000D45ED /* UIViewController+Acani.m in Sources */,
 				D27CF3D817661EF2000D45ED /* AACWebViewController.m in Sources */,
-				AF2766CD17920E60002D8DA8 /* ACMessagesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
