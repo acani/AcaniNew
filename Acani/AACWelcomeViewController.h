@@ -2,4 +2,7 @@
 
 @interface AACWelcomeViewController : UIViewController
 
+- (void)beginLoggingIn;
+- (void)endLoggingIn;
+
 @end

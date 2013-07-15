@@ -68,14 +68,10 @@
 
 - (void)logInAction
 {
+    [(AACWelcomeViewController *)_window.rootViewController beginLoggingIn];
+
     [FBSession openActiveSessionWithReadPermissions:@[@"user_photos"] allowLoginUI:YES completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
         NSLog(@"facebookAccessToken: %@", session.accessTokenData.accessToken);
-        NSLog(@"state: %i", state);
-        NSLog(@"\n");
-        NSLog(@"FBSessionStateOpen: %i", FBSessionStateOpen);
-        NSLog(@"FBSessionStateOpenTokenExtended: %i", FBSessionStateOpenTokenExtended);
-        NSLog(@"FBSessionStateClosedLoginFailed: %i", FBSessionStateClosedLoginFailed);
-        NSLog(@"FBSessionStateClosed: %i", FBSessionStateClosed);
 
         switch (state) {
             case FBSessionStateOpen:
@@ -84,12 +80,14 @@
             case FBSessionStateClosed:
             case FBSessionStateClosedLoginFailed:
                 [[FBSession activeSession] closeAndClearTokenInformation];
+                [self endLoggingIn];
                 break;
             default:
                 break;
         }
 
-        if (error) {
+        // Alert error unless user canclled login.
+        if (error && !(error.code == FBErrorLoginFailedOrCancelled && [[error userInfo][FBErrorLoginFailedReason] isEqualToString:FBErrorLoginFailedReasonUserCancelledValue])) {
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil) message:error.localizedDescription delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
             [alertView show];
         }
@@ -114,10 +112,31 @@
 
 - (void)logIn
 {
-    // TODO: Open URL (for specific page) in completion block if app was last opened with one.
-    AACUsersViewController *usersViewController = [[AACUsersViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:usersViewController];
-    _window.rootViewController = navigationController;
+    FBRequest *request = [[FBRequest alloc] initWithSession:[FBSession activeSession] graphPath:@"me" parameters:@{@"fields": @"id"} HTTPMethod:@"GET"];
+    [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        NSLog(@"result: %@", result);
+
+        [(AACWelcomeViewController *)_window.rootViewController endLoggingIn];
+
+        if (error) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil) message:error.localizedDescription delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+            [alertView show];
+        } else {
+            NSLog(@"user.id: %@", [result id]);
+
+            // TODO: Open URL (for specific page) in completion block if app was last opened with one.
+            AACUsersViewController *usersViewController = [[AACUsersViewController alloc] init];
+            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:usersViewController];
+            _window.rootViewController = navigationController;
+        }
+    }];
+}
+
+- (void)endLoggingIn
+{
+    if ([_window.rootViewController respondsToSelector:@selector(endLoggingIn)]) {
+        [(AACWelcomeViewController *)_window.rootViewController endLoggingIn];
+    }
 }
 
 - (void)hideStatusBar
